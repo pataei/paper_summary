@@ -1,1 +1,29 @@
+SymInfer: Inferring Program Invariants using Symbolic States
 
+Summary:
+- program invariants: properties that always hold at a program 
+location, e.g., the relationship between the variables in a 
+program, both local variables and parameters
+- dynamic invariant generation techniques use concrete program
+state (assigning concrete values to variables) as inputs to 
+comput usefule invariants
+- this paper proposes computing invariants from the symbolic 
+states of a program
+
+Comments:
+- I really didn't like the paper! it was definitely a software
+engineering paper and not a PL paper!
+- I was very confused by the terminology they used. E.g., in
+section IV, the typed values or symbolic value (isn't it just
+variable?)
+- They cannot support their claims of SymInfer's effectiveness 
+and expressiveness by just some experiments and comparison, 
+although this may be the way folks do it SE, who knows?!
+- Jeff's comment: "they should have refered to CEGAR, 
+counterexample-driven generated abstract refinement, too."
+CEGAR is a top-down approach that refines invariants to be more
+specific, i.e., it strengtherns weak invariants. While CEGIR is 
+a bottom-up approach, it starts by finding more specific 
+invariants which it generalizes
+
+In meeting comments:
