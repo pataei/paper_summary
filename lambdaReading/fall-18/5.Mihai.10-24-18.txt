@@ -26,4 +26,12 @@ specific, i.e., it strengtherns weak invariants. While CEGIR is
 a bottom-up approach, it starts by finding more specific 
 invariants which it generalizes
 
+
 In meeting comments:
+- Eric: purpose of invariants? couldn't it be helpful if eg the 
+developer missed some property and then they figure it out?!
+- Eric: symbolic execution and choice?! the prev paper we read on
+symbolic execution offered some more places for choices, look into 
+that
+- Ghadeer: how do they decide the state to generate the invariant?
+isn't it sometimes based on getting the time complexity?!
