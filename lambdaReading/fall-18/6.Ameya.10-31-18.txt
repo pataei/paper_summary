@@ -29,3 +29,19 @@ Comments:
 
 
 In-meeting comments:
+- the scope graph formalism is very concrete and intuitive but it's not 
+  very easy to illustrate type systems with it
+- scope graphs are a uniform rep of type systems
+- purpose: useful for tools that implement langs but it's not probably 
+  appealing to PL researchers who know how to do it but it's good for 
+  engineer folks that want to implement langs that work with different ...
+- abstract binding trees : AST + binding --> it's probably too simplistic 
+  and the scope graph is probabaly much more powerful
+- lang workbench: making tools to make DSLs
+- scope: non-continuous regions in a prog where the declaration of a var
+  is visible. but scope here is just an abstraction, a node in a graph
+- this rep solves the problem of wholes in the traditional scope 
+- here scope is explicit but they need other things to make sense of the
+  concreteness of scopes. you can point to a place and know the scope of
+  it. if you want to reason about sth you have to make it explicit often 
+  times.
