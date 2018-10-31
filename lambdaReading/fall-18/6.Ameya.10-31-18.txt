@@ -1,0 +1,31 @@
+[Scopes as Types](https://hendrik.van-antwerpen.net/publications/AntwerpenBPRV18.pdf)
+
+Summary:
+They introduce a new domain specific meta-lang for the specification of 
+static semantics, based on scope graphs and constraints with the goal 
+to support high-level specification of type systems that can be used for
+multiple purposes, like reasoning and implementing type checkers.
+
+Notes:
+- Nominal vs structural type system:
+ - nominal: types are identified by name, i.e., compatibility and 
+            equivalence of data types is determined by explicit 
+            declarations and/or the name of the types. Eg.: C++, 
+            C#, Java, Objective-C, Delphi, Swift, and Rust
+ - structural: types are identified by structure, i.e., type 
+               compatibility and equivalence are determined by the 
+               type's actual structure or definition, and not by other 
+               characteristics such as its name or place of declaration
+               Eg.: OCaml, Haskell
+- typing is deeply dependent on name resolution
+- scope graph: a prog is reduced to a graph that represents its binding info
+
+Comments:
+- i was kind of nonchalant about the paper!
+- Is type system specification just the inference rules of a type system?
+- p17: eg of prematurely optimization for particular binding patterns?
+- how do they validate proposals like this?
+
+
+
+In-meeting comments:
