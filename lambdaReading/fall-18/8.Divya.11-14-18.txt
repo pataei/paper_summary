@@ -35,4 +35,17 @@ For future reference:
 - Section 3.3.3 for your own writing of type safety!
 
 In-meeting comments:
-
+- Got really bored!!
+- The discussion at the end was really exciting: is this even a good
+  thing? allowing incomplete meaningless to run!
+  Jeff: no, it's too permissive
+  Qiaoran: no
+  Divya: yes
+  Ameya: it's cool but not for teaching
+  Eric: the coq tactic system, the idris and agda hole and so on are 
+        useful for very complicated problems but probably not a good 
+        idea to start off students with and teaching them programming
+        with these kinds of tools. we can call this kind of tools 
+        "support for incremental programming".
+  Martin: gradualizing steps of programming, the static and dynamic 
+          semantics, is good practice.
