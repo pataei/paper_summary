@@ -1,0 +1,38 @@
+Live Functional Programming with Typed Holes
+@ https://arxiv.org/abs/1805.00155
+
+Summary:
+It provides dynamic meaning to incomplete programs. It result is a 
+full solution to the gap problem, i.e. a proof-of-concept live 
+pure functional programming environment that provides rich static 
+and dynamic feedback that never suffers from temporal or perceptive 
+gaps. This is due to their type safety invariant that they establish 
+where it guarantees that every editor state has dynamic meaning.
+
+Notes:
+- Complete programs: programs that are syntactically well-formed
+  and free of type errors
+- the gap problem: incomplete programs are formally meaningless
+
+
+Comments:
+- NEVER MIND! They don't actually fill the holes themselves.
+  I didn't read through the details. From their examples, it seems 
+  that they don't necessarily fill the holes, they just leave them
+  as empty missing parts of the program. Or do they actually 
+  sometimes fill the holes? If yes could someone explain how 
+  they actually fill the holes? (in the program level and not type
+  level)
+- As they state, the commutativity property only holds in pure FP 
+  enviornments. So it doesn't work with effects? Even if we wrap 
+  them in monads?
+- For fill-and-resume, we could use choices? dimension, version/time,
+  the computation that doesn't depend on the hole is free of it and
+  so doesn't require recomputation after filling the hole. --> this
+  could be a good use case for variational programming!
+
+For future reference:
+- Section 3.3.3 for your own writing of type safety!
+
+In-meeting comments:
+
