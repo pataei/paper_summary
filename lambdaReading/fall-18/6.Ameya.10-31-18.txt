@@ -1,4 +1,5 @@
-[Scopes as Types](https://hendrik.van-antwerpen.net/publications/AntwerpenBPRV18.pdf)
+Scopes as Types
+@ https://hendrik.van-antwerpen.net/publications/AntwerpenBPRV18.pdf
 
 Summary:
 They introduce a new domain specific meta-lang for the specification of 
