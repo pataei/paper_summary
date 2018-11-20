@@ -1,0 +1,33 @@
+Functional Pearl: Trouble Shared is Trouble Halved
+@http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=50092DF88672406B8486DED088B3E9E1?doi=10.1.1.10.1217&rep=rep1&type=pdf
+
+Summary:
+they make an attempt at achieving a better performance in applying
+recursive functions with a potential for memoization over inductive
+data types that could serve as memo structures, like nexuses. 
+
+Notes:
+- nexus: a tree that contains shared nodes, nodes that have 
+         more than one incoming arc. Note that they still 
+         may have more than one outgoing arc too.
+- boolean lattice: In abstract algebra, a Boolean algebra or 
+                   Boolean lattice is a complemented 
+                   distributive lattice. This type of algebraic 
+                   structure captures essential properties of 
+                   both set operations and logic operations.
+                   @ https://en.wikipedia.org/wiki/Boolean_algebra_(structure)
+
+- memo structure: features constant time access to memoized 
+                  function calls
+
+Comments:
+- it was fun working through their examples and trying to
+  make sense of it. it also seems interesting what their 
+  proposing if it can be generalized to some specific 
+  group of problems.
+- so a nexus is essentially a directed graph, right? with 
+  no self cycle kind of thing
+- zoomorphism?
+
+In-meeting comments:
+
