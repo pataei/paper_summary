@@ -16,18 +16,43 @@ Notes:
                    structure captures essential properties of 
                    both set operations and logic operations.
                    @ https://en.wikipedia.org/wiki/Boolean_algebra_(structure)
-
 - memo structure: features constant time access to memoized 
                   function calls
+- memoization: In computing, memoization or memoisation is an 
+             optimization technique used primarily to speed 
+             up computer programs by storing the results of 
+             expensive function calls and returning the cached 
+             result when the same inputs occur again. It's a 
+             trade off between space and time.
 
 Comments:
 - it was fun working through their examples and trying to
   make sense of it. it also seems interesting what their 
   proposing if it can be generalized to some specific 
   group of problems.
-- so a nexus is essentially a directed graph, right? with 
-  no self cycle kind of thing
-- zoomorphism?
+- how is memoization benefitial when we have lazy evaluation?
+  lazy evaluation evaluates an expression only once if you name
+  that expression, otherwise you'll end up evaluating it multiple
+  times if you copy the same expression over and over again. 
+  Naming the expressions is basically what they're doing in this
+  paper.
+- how does it generalize to other problems? and how much can
+  you generalize it?
+- foomorphism? couldn't find it in the references!!
 
 In-meeting comments:
-
+Eric: 
+- functional pearl: short paper that demonstrate a cool FP technique, 
+                    short and example-driven
+- memoization could be inefficient if your keys are very complicated
+  and looking them up will take a long time
+- represent the recursive structure as a data type and you use sharing
+  explicitly to remember (not recompute) the values of expression and
+  don't do redundent work
+- super cool trick but very very subtle
+- optimizing for performance is hard, sublte, and hard to observe that 
+  the trick is doing what you want
+- haskell is famous for being very optimizable but also very hard to do
+  so!
+- the core idea doesn't depend on lazy evaluation although it depends 
+  on purity
