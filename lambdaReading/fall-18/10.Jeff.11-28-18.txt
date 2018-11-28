@@ -2,6 +2,9 @@ Functional Pearl: Enumerating the Rationals
 @https://www.cs.ox.ac.uk/jeremy.gibbons/publications/rationals.pdf
 
 Summary:
+- The paper proposes some approaches for enumerating the infinite
+  list of rationals without duplicates in FP. Although all the 
+  approaches were already proposed in mathematics.
 
 Notes:
 - enumerating an infinite list of infinite lists is only possible 
