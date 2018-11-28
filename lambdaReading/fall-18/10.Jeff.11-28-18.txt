@@ -1,0 +1,31 @@
+Functional Pearl: Enumerating the Rationals
+@https://www.cs.ox.ac.uk/jeremy.gibbons/publications/rationals.pdf
+
+Summary:
+
+Notes:
+- enumerating an infinite list of infinite lists is only possible 
+  if you traverse its finite diagonals which is an infinite list 
+  of finite lists. Note that these are upper right to lower left 
+  diagonals.
+- m/n and m'/n' represent the same rational iff they have the 
+  same path in the gcd (greatest common divisor) tree constructed
+  based on Eucilid's subtractive alg
+- each row of the Stern-Brocot gives you the simpleset rational 
+  numbers you haven't seen yet
+- the adv of Calkin-Wilf tree is that you can enumerate the 
+  rationals without creating an intermediate list (shown in rats6)
+  while that wasn't the case for the Stern-Brocot tree (shown in
+  rats5)
+  
+Comment:
+- It was just cool to read esp after the first sectin and
+  seeing the mathematics and relationships between different
+  ways to construct trees with the same elements but different
+  structure
+
+In-meeting comments:
+- Julia has statically interpreter
+- book to look into mentioned by Eric: Numbers and games
+- unfold basically acts like a generator, you give it a function
+  and a base case and it'll generate a list for you
