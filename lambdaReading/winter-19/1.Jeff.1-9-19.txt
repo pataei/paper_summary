@@ -1,1 +1,13 @@
+Build Systems à la Carte
+@https://dl.acm.org/citation.cfm?doid=3243631.3236774
 
+Summery:
+
+Notes:
+
+Comments:
+ - interesting to look at excel as a build system!
+ - I think I'd have appreciated much more if I had 
+   more experience with advanced FP!
+
+In-meeting comments:
