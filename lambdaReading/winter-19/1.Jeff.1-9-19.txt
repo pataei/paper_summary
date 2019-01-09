@@ -3,11 +3,31 @@ Build Systems à la Carte
 
 Summery:
 
+
 Notes:
+
 
 Comments:
  - interesting to look at excel as a build system!
- - I think I'd have appreciated much more if I had 
-   more experience with advanced FP!
-
+ - interesting to learn about build systems by their DSL.
+ 
 In-meeting comments:
+Eric: 
+ - nice way to use Haskell (FP) to model a domain.
+ - one of the main goals is to understand the domain.
+ - fig5: getvalue doesn't have Maybe b/c they're setting
+   the values to some default value using the func (k -> v)
+   in initialise.
+Martin:
+ - maybe you could sacrifice some of the generality for 
+   ease of use.
+ - generally a problem in domain specific lang desing.
+ - it's generic programming and not type-level programming.
+ - excel isn't imperative in nature. while build systems are.
+ 
+- type level programming: having computation in type level,
+  i.e. effective functions at type level, you can easily do this
+  with dep type langs but you can also do it with Haskell by
+  going through some loops.
+- really cool to pass type class as an argument to a type 
+  constructor. keep in mind that you have to turn on data kind.
