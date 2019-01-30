@@ -27,11 +27,28 @@ Note:
   where P and Q are assertions and C is a command. P is named the 
   precondition and Q the postcondition: when the precondition is 
   met, executing the command establishes the postcondition.  
+- stat verification is not expressive enough although it verifies 
+  the prog without running it.
+- dyn verification is exponentially strong/expressive however it 
+  checks everything in the runtime and adds overhead to run time.
   
 Comments:
 - Explaination of why static verification doesn't work for their ex?
+  + for the second withdraw the only thing you know about balance is
+    that it's greater than zero. however, you don't know that since
+    you don't know that it's 70 because that's keeping track of the 
+    state which you cannot do in static verification.
 - They say that hybrid approaches do not support a smooth continuum 
   between static and dynamic verification. How is theirs a continuum
   b/w stat and dyn?
 
 In-meeting comments:
+- Eric:
+  - gradualizing a system is similar to variationalizing it in some
+    sense! 
+  - how to make a system variational and does the world cares about it?
+    (idea for paper, although it's not probably going to be easy)
+    
+  -   |--gradual typing--|--gradual verification(e.g. dep. type)--|
+    Python------------Haskell---------------------------------Perfection
+  
