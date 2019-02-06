@@ -1,1 +1,82 @@
+Monads for Functional Programming
+@http://homepages.inf.ed.ac.uk/wadler/papers/marktoberdorf/baastad.pdf
+
+
+Summary:
+- Monads provide a convenient framework for simulating effects found in 
+  other langs, e.g. globa state, exception handling, output, or 
+  non-determinism.
+- the style of using monads to simulate effects regains some of the 
+  flexibility provided by various features of impure langs. it doesn't
+  eliminate the tension between the flexibility afforded by explicit 
+  data and the brevity afforded by implicit plumbing, but it does 
+  ameliorate it to some extent.
+- progs in impure langs are easier to modify than those in pur langs,
+  but sometimes the reverse is true. e.g. reversing the order of exe 
+  trace.
+- a -> M b: read as: a func that accepts an arg of type a and returns 
+  a result of type b, with a possible additional effect captured by M.
+- needs that come with monads:
+  * a way to return a value into the computation that returns that value
+    and does nothing else: return :: a -> M a --> (here unit)
+  * a way to apply a func of type a -> M b to a computation of type M a.
+    bind :: M a -> ( a -> M b) -> M b --> (here *)
+- identity monad:
+  type M a = a 
+  unit :: a -> I a --> identity func
+  unit a = a
+  (*) :: M a -> (a -> M b) -> M b --> just application
+  a * k = k a
+  it's the identity func on types
+- a monad is a triple (M, unit, *), where:
+  * M: type constructor
+  * two operations of the given polymorphic types
+- m * \lambda a. n == let a = m in n
+  performs computation m, bind a to the resulting value and then perform
+  computation n.
+- state monad:
+  type M a = State -> (a, State)
+  type State = Int
+  unit a = \lambda x. (a,x)
+  m * k = \lambda x. let (a,y) = m x in
+                     let (b,z) = k a y in
+                     (b,z)
+  tick :: M ()
+  tick = \lambda x. ((), x + 1)
+- output monad:
+  TO BE COMPLETED!!!
+- if a pure lang is lazy then output will be displayed in an incremental 
+  fashion as the computation occurs.
+
+Notes:
+- Miranda and Haskell: pure. Scheme and Standard ML: impure.
+- pure langs easier to reason about and may benefit from lazy eval.
+- pure lang benefit from making all flow of data explicit. since a prog
+  in such a lang is written as a set of equations. explicit data flow
+  ensures that the value of an expr depends on its free variables alone
+  and that the order of computation doesn't matter, making such progs 
+  susceptible to lazy eval.
+- impure langs offer efficiency benefits and may make possible a more 
+  compact mode of expr.
+
+Comments:
+- really enjoyed the paper and how they explained some concepts and 
+  comparison between pure and impure langs and how using monads play 
+  a role in the tension of their benefits.
+- they explained concepts, esp monads, in a way that I probably could
+  not explain like that myself but it was really enjoyable reading it.
+  like i can prog with monads but that's probably bc i'm comfortable with
+  haskell type system instead of having a deep understanding of the concept.
+- not sure if I grasp the ph that explains that "explicit data flow 
+  becomes both a blessing and a curse"?
+- "a monad differs from a monoid in that the right operand involves a 
+  binding operation." is it talking about the right unit and could 
+  someone write it for monoids?
+- I'm not sure if I totally agree with the use of guarantee for a 
+  parser! I mean if I want to parse sth I either want to parse the 
+  string completely or just get an error stating that it couldn't
+  parse it to an expression conforming to the syntax (generating an
+  AST)!
+
+In-meeting comments:
 
