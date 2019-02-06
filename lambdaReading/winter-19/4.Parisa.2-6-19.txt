@@ -60,6 +60,7 @@ Notes:
   compact mode of expr.
 
 Comments:
+- good intro to monads for even beginners! 
 - really enjoyed the paper and how they explained some concepts and 
   comparison between pure and impure langs and how using monads play 
   a role in the tension of their benefits.
