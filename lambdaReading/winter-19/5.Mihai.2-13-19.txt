@@ -1,0 +1,13 @@
+Deriving Via or, How to Turn Hand-Written Instances into an Anti-Pattern
+@https://www.kosmikus.org/DerivingVia/deriving-via-paper.pdf
+
+Summary:
+
+
+Notes:
+
+
+Comments:
+
+
+In-meeting comments:
