@@ -1,6 +1,7 @@
 Monads for Functional Programming
 @http://homepages.inf.ed.ac.uk/wadler/papers/marktoberdorf/baastad.pdf
 
+**it was such a good meeting!
 
 Summary:
 - Monads provide a convenient framework for simulating effects found in 
@@ -43,17 +44,26 @@ Summary:
                      (b,z)
   tick :: M ()
   tick = \lambda x. ((), x + 1)
-- output monad:
-  TO BE COMPLETED!!!
 - if a pure lang is lazy then output will be displayed in an incremental 
   fashion as the computation occurs.
+- two different encoding of monads:
+  1) bind, return with three monad laws (right unit, left unit, and
+     associative)
+  2) return, map, and join with seven properties where
+     map :: (a -> b) -> (M a -> M b)
+     map f m = m * \lambda a .unit (f a)
+     join :: M (M a) -> M a
+     join z = z * \lambda m. m
+     **Note: m * k = join $ map k m
+  these two encodings are equivalent. 
 
 Notes:
 - Miranda and Haskell: pure. Scheme and Standard ML: impure.
 - pure langs easier to reason about and may benefit from lazy eval.
 - pure lang benefit from making all flow of data explicit. since a prog
-  in such a lang is written as a set of equations. explicit data flow
-  ensures that the value of an expr depends on its free variables alone
+  in such a lang is written as a set of equations. ** explicit data flow
+  ensures that the value of an expr depends on its free variables alone **
+  --> Martin asked why is that the case!!
   and that the order of computation doesn't matter, making such progs 
   susceptible to lazy eval.
 - impure langs offer efficiency benefits and may make possible a more 
@@ -73,11 +83,36 @@ Comments:
 - "a monad differs from a monoid in that the right operand involves a 
   binding operation." is it talking about the right unit and could 
   someone write it for monoids?
+  * Eric: monoid is just glusing two effects together! 
+  * Martin: the free variable of monads make them more flexible.
 - I'm not sure if I totally agree with the use of guarantee for a 
   parser! I mean if I want to parse sth I either want to parse the 
   string completely or just get an error stating that it couldn't
   parse it to an expression conforming to the syntax (generating an
   AST)!
+  * Eric respond: you still prefer to know what is causing the erro and
+                  how far you got instead of having absolutely no idea!
 
 In-meeting comments:
+- Mihai: how are the two definitions of monads equivalent?
+  * Martin: the Moggi definition (return, join, map) is clearer and nicer
+            but it has three ops, if you can do it with 2 why bother with
+            3?! however the types of Moggi is more symmetric. Still the 
+            fact that monads make computation linear is captured perfectly
+            by the Wadler's definition.
+- Ameya: when would you use monads in impure langs?
+  * Eric: pointed to the last ph of page2: "these notes show how to use 
+          monads to structure an evaluator so that the changes mentioned are 
+          simple to make. In each case, all that is required is to redefine 
+          the monad and to make a few local changes." i.e. bc you can separate
+          computation and effect.
+  * Martin: monads can capture lots of concepts, if you're using sth that 
+            behaves like a monad you should recognize that and benefit from
+            what monads and its libraries have to offer you.
+- Prashant: is using monads the best practice to capture effects in a pure 
+            lang? why not just add effects to the lang?
+  * Eric: lazy eval and parallelization and distribution.
+          map reduce is functional alg that benefits from purity and can 
+          distribute work bc it knows there are no effects
+  * Martin: understand and reason about code
 
