@@ -1,13 +1,96 @@
 Deriving Via or, How to Turn Hand-Written Instances into an Anti-Pattern
 @https://www.kosmikus.org/DerivingVia/deriving-via-paper.pdf
 
-Summary:
+Look into:
+- representable type class
+- default signature
+- coerce
 
+Summary:
+- Derving via is a high-level DSL that allows for declaring recursive
+  patterns in a way that feels natural and allows a high degree of 
+  abstraction.
+- They capture general rules for defining new instances using newtypes.
+  And using derving via, a new lang construct, they use newtypes to 
+  explain to the compiler exactly how to construct the instance without
+  having to write it by hand. As a result, we are no longer limited to
+  a fix set of predefined ways to define particular class instances,
+  but can teach the compiler new rules for deriving instances, selecting
+  the one we want using a high-level description.
+- gnd vs deriving via: gnd always picks the rep type for you but in 
+  deriving via the user has the power to choose this type.
+- another adv of deriving via is that it allows decoupling the def of 
+  defaults from the site of the class def. hence, if a package author is 
+  hesitant to add a default bc that might incur an unwanted additional 
+  dependency, nothing is lost, and the default can simply be added in a 
+  separate package.
+- in conclusion, deriving via encourages giving names to recurring patterns
+  and reusing them where needed. it's their feeling that most instance 
+  declarations that occur in the wild can actually be derived by using a 
+  pattern that deserves to be known and name, and that instance defined 
+  manually should become an anti-pattern in all but some rare situations.
 
 Notes:
-
+- Instance resolution in haskell will match the instance head first 
+  before considering the context and once ghc has commited to an 
+  instance it will not backtrack. 
+- section 1.1 good expl of when you need to write your instances by hand.
+- boilerplate code: In computer programming, boilerplate code or just 
+  boilerplate refers to sections of code that have to be included in many 
+  places with little or no alteration. It is often used when referring to 
+  languages that are considered verbose, i.e. the programmer must write a 
+  lot of code to do minimal jobs.
+- there are often additional constraints imposed on the actual values of a 
+  type that are not sufficiently expressed in their types. You can do that
+  with newtype-based adapters, e.g.:
+  newtype NonNegative a = NonNegative {getNonNegative :: a}
+- newtype Age = MkAge Int
+  Age is the original type and Int is the representation type
+- a newtype is intended to be a zero-cost abstraction that acts identically 
+  to its representation type at runtime. Accordingly, any function that 
+  mentions a newtype in its type sig should be able to be converted to a new
+  func with all occurrences of the newtype in the type sig replaced with the
+  rep type, and moreove, that new func should behave identically to the old one
+  at runtime.
+- Coercible a b --> witnesses the fact that two types a and b have the same 
+  rep at runtime.
+* a Coercible constraint can be thought of as evidence that ghc can use to 
+  cast bw two types. Corecible isn't a type class, so it's impossible to write
+  an instance for it??? but ghc treats it as a type class???
+- a type var is quantified when you bind it to a concrete type.
+- orphan instance: instances defined in a separate module from both the type 
+  class and data types being used. which deriving via makes avoiding them
+  possible.
+- Languages in the ML family, such as Standard ML or OCaml, provide functors, 
+  which are a feature of the module system that allows writing functions from 
+  modules of one signature to modules of another signature. In terms of 
+  functionality, functors somewhat closely resemble Deriving Via, as functors 
+  allow “lifting” of code into the module language much like Deriving Via allows 
+  lifting of code into GHC’s deriving construct.
 
 Comments:
+- I really enjoyed the paper, esp for 2 reasons: 1) the structure of the
+  paper, right off the bat they started by giving an example and showing
+  the problem, explaining when one is required to write their own instance,
+  and show how deriving via can resolve that. then they go on to different
+  usecases. they finally go into the details of their implementation. which
+  by this point the reader has a clear idea of what deriving via is doing,
+  and why it's useful. 2) they introduce the concepts and ideas that they're
+  using very briefly and clearly which results in me wanting to read about
+  half of their references.
+- regarding note1, so ghc doesn't care about the type constraint?
+- note *
+- deriving via is a superset of gnd wrt the instances they can generate. it's
+  obvious but is there a way to prove it formally?
+- isn't c a free type var in their ex section 3.3.?
+- i don't think section 3.3.2 (where they're talking about the order and syn of
+  deriving via) was really that important to waste half a page on
+  it, not to mention their anology to where expression isn't really fair since
+  a where expr is translated to a let expr.
+- ex in sec 4.1. what is r doing?
+- can we discuss dropping return from monads? seems possible!!
+  pure :: Applicative f => a -> f a
+  return :: Monad m => a -> m a
 
 
 In-meeting comments:
