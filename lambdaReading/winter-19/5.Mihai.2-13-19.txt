@@ -94,3 +94,8 @@ Comments:
 
 
 In-meeting comments:
+- Eric: 
+  - ML functors takes modules as input and produce modules as output.
+- Martin: 
+  - I hated this paper! uses lots of jargons and not motivated well enough. 
+    This is an example of how not to write a paper!!
