@@ -1,0 +1,29 @@
+Propositions as Types 
+@https://dl.acm.org/citation.cfm?id=2699407
+
+
+Summary:
+- propositions as types (for each proposition in the logic there 
+  is a corresponding type in the programming lang and vice versa).
+- proofs as programs (for each proof of a given proposition there 
+  is a prog of the corresponding type and vice versa).
+- simplification of proofs as evaluation of program (for each way 
+  to simplify a proof thre is a corresponding way to evaluate a prog).
+- this deep correspondence has inspired automated proof assistants.
+
+Notes:
+- effectively calculable is defined by means of three definitions:
+  lambda calculus, recursive functions, and Turing machines.
+
+Comments:
+- It was a nice brief explanation to Curry-Howard correspondence.
+  I also like that he explains it step by step.
+  I rememeber the first time I read it, it took me some time to 
+  digest that simplifying proofes corresponds to evaluating progs.
+- I liked the ph that he draws the reader attention to meta and obj
+  lang, especially how he wraps it up by saying that "to understand 
+  implication one must first understand implication!"
+
+In-meeting comments:
+
+
