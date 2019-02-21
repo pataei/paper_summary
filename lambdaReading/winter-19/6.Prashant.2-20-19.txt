@@ -10,12 +10,48 @@ Summary:
 - simplification of proofs as evaluation of program (for each way 
   to simplify a proof there is a corresponding way to evaluate a prog).
 - this deep correspondence has inspired automated proof assistants.
-
-Notes:
 - effectively calculable is defined by means of three definitions:
   lambda calculus, recursive functions, and Turing machines.
-
+- proof rules should come in pairs. In natural deduction, these
+  are introduction and elimination pairs. An intro rule specifices
+  under what circumstances one may assert a formulawith a logical 
+  connective, while teh corresponding elimination rule shows how to 
+  use that logical connective.
+- the intro represents as it were the definition of the symbol 
+  concerned, and the elimination is no more than the consequence of
+  the definition. A consequence of this insigh is that any proof 
+  could be normalized to one that is not "roundabout", where no 
+  concepts enter into the proof other than those contained in the final
+  result. An immediate consequence of this is consistency. 
+- Curry observed the fact, relating a theory of functions to a theory 
+  of implication. every type  of a func (A -> B) could be read as a 
+  proposition (A \supset B).
+- Howard pointed out there is a similar correspondence bw natural 
+  deduction and simply typed lambda claculus and that simplification of
+  proofs corresponds to evaluation of progs. 
+- introduction rules correspond to ways to define or construct a value
+  of a given type, and elimination rules correspond to ways to use or
+  deconstruct values of the given type. 
+- Howard, proposes that the predicate quantifiers \forall and \exists
+  corresponds to new types we now call "dependent types".
+- existential quantification in second-order logic corresponds precisely
+  to data abstraction, an idea that now underpins much research in the 
+  semantics of PLs.
+- proofs are represented by trees, where each node of the tree is an 
+  instance of a proof rule.
+- they use similar lang to describe rules (when-then) and formulas (implies).
+  the same idea applies at two levels, the meta level (rules) and the obj
+  level (formulas), and in two notations using a line with premises above
+  and conclusion below for implication at the meta level and the symbol 
+  \supset with premise to the left and conclusion to the right at the obj
+  level. it is almost as if to understand implication one must first understand
+  implication. This Zeno's paradox of logic was wryly observed by Carroll.
+- like proof rules, type rules come in pairs. an intro rule describes how
+  to define or construct a term of the give type, while an elimination rule
+  describes how to use or deconstruct a term of the given type.
+  
 Comments:
+- Great history!
 - It was a nice brief explanation to Curry-Howard correspondence.
   I also like that he explains it step by step.
   I remember the first time I read it, it took me some time to 
