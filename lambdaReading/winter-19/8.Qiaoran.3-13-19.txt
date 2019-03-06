@@ -1,0 +1,14 @@
+Haskell Boards the Ferry
+Database-Supported Program Execution for Haskell
+@https://db.inf.uni-tuebingen.de/staticfiles/publications/ferryhaskell.pdf
+
+Summary:
+
+
+Notes:
+
+
+Comments:
+
+
+In-meeting comments:
