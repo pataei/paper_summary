@@ -3,12 +3,31 @@ Database-Supported Program Execution for Haskell
 @https://db.inf.uni-tuebingen.de/staticfiles/publications/ferryhaskell.pdf
 
 Summary:
-
+They present a Haskell lib for db-supported prog exe. They claim that their
+implementation avoids unnecessary data transfer and context switching bw
+the db coprocessor and the PL runtime by ensuring that the number of generated
+relational queries is only determined by the prog fragment's type and not by
+the db size -- this is called "avalanche-safety" property. 
 
 Notes:
-
+- Query langs are often inadequately integrated into host PLs. 
+- DB kernels are optimised for intra-query parallel exe and can thus very 
+  efficiently carry out data-intensive and data-parallel computations. 
 
 Comments:
-
+- At the end of the intro, they claim that their impl minimizes unnecessary 
+  data transfer. But how do they prove that? How do they know it minimizes it?
+- It probably wasn't very well-written, I had so many questions after reading 
+  sec 2. It just gave a very high-level ideas and throws a couple of specific
+  details in there without explaining them.
+- They had some great ideas that I can use for my own research like defining
+  Query and Queryable type classes, loop-lifiting translation
+- They leverage metaprogramming capabilities of Template Haskell, they provide
+  for automatic derivation of QA instances for any user-defined product type
+  and automatic generation of Haskell records form db schemas. 
+- They also support iterative staging of emedded progs by allowing for runtime
+  code generation, compilation, and execution of db-executable progs.
 
 In-meeting comments:
+- Eric: prefer to read the Ferry paper!
+-- didn't take note!!
