@@ -1,0 +1,33 @@
+How to make ad-hoc polymorphism less ad hoc
+@http://people.csail.mit.edu/dnj/teaching/6898/papers/wadler88.pdf
+
+Summary:
+They present type classes, a new approach to ad-hoc poly. They permit
+overloading of arithmetic operators and generalize the eqtype variables. 
+Their type sys is a generalization of the Hindley/Milner type sys, which is a 
+widely accepted approach to parametric poly.
+
+They introduce type class and type instances along with compile-time translation 
+of progs with classes and instances to equivalent progs without them. Their trans
+basically introduces a method dictionary for any newly introduced type class. 
+
+Notes:
+- Ad-hoc polymorphism occurs when a func is defined over serveral different
+  types, acting in a differenct way for each type. e.g.: overloaded 
+  multiplication. although both 3*3 and 3.14*3.14 would work but one cannot
+  define: square x = x*x and then write square 3, square 3.14.
+- Parametric polymorphism occurs when a func is defined over a range of types,
+  acting in the same way for each type. e.g.: length func for lists of any type
+- if one makes equality ad-hoc poly (i.e. write it as an overloaded func) these
+  will work: 3*4 == 12, 'a' == 'b'. But one cannot define a func using equality,
+  e.g.: this won't work:
+  member [] y     = False
+  member (x:xs) y = (x==y) || member xs y
+- One could make equality fully poly, i.e.: (==) :: a -> a -> Bool
+  so we can have: member :: [a] -> a -> Bool
+  BUT this would allow one to apply member to functions which results in run-time
+  error. A third approach is to make it partly poly:
+  (==) :: a_(==) -> a_(==) -> Bool
+  and so: member :: [a_(==)] -> a_(==) -> Bool 
+- in OOP you have a dictionary where every object carries with itself a pointer
+  to a method, a procedure for performing equality test.
