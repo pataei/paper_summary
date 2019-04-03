@@ -57,6 +57,8 @@ Notes:
   structurally smaller than the value itself. this can be relaxed when defining 
   families but defs using families which don't satisfy strict positivity will not
   pass totality checking.
+- backwards compatibality: when you introduce a new feature to a lang progs written
+  in its previous version should still work correctly.
 
 
 Comments:
@@ -73,5 +75,15 @@ Comments:
 - typo fig 4?
 
 In-meeting comments:
+- Eric: 
+  - look into Idris source code for a more clarified expl.
+  - be concious of the elaboration step in PLs 
+  - elaboration has become more systematic to make it interact with Idris 
+    elaboration directly, so it basically puts syntax of elaboration into
+    the lang so that you can directly code with the core of Idris. this 
+    promise is more of a proof stand point.
+    
+- Martin:
+  - SPJ book for a better understanding of compilation
 
 
