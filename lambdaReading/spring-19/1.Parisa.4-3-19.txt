@@ -3,13 +3,74 @@ Programming Language: Design and Implementation
 @https://pdfs.semanticscholar.org/1407/220ca09070233dca256433430d29e5321dc2.pdf
 
 Summary:
+Idris is intended to be a general-purpose lang. They describe the
+high-level lang and the underlying type theory with the tactic-based
+method for elaborating concrete high-level syntax with implicit args
+and type classes into a fully explicit type theory. They also show that
+this method facilitates the implementation of new high-lvevl lang 
+constructs.
 
+flow: 
+Idris --(desugaring)--> Idris^- --(elaboration)--> TT --(compilation)--> Executable
+
+TT: is lambda-cal with dep types, augmented with algebraic data types 
+    and pattern matching
 
 Notes:
+- Agda and Coq have emerged as a promising approach to ensuring the 
+  correctness of software.
+- Type checking ensure a prog has the intended meaning, dependent types
+  (where types may be predicated on values) allow a progrommer to give a
+  prog a more precise type and hence have increased confidence of its 
+  correctness. 
+- Agda and Coq come from the theorem proving community, Idris takes Haskell
+  as its main influence.
+- full dep. type: there is no restriction on which values may appear in types.
+- a well-defined core lang with well-understood meta-theory can ensure the 
+  correctness of a the lang impl.
+- unlike haskell all top-level defs must have a type sig due to type inf.
+  being undecidable for langs with dep types.
+- Vect is indexed over Nat and parametrized by a type. indices vs parameters:
+  a parameter is fixed across an entire data structure but an index may vary.
+- totality makes sure progs produce answers in finite time for all possible 
+  inputs. if a prog terminates for all its inputs then its type gives a strong 
+  guarantee about the properties specified by its type and we can optimise
+  total progs more aggressively.
+- the totality checked is impled independent of the type checker and elaborator.
+- names can be overloaded in Idris in an ad hoc manner and resolved according
+  to the context in which they are used. THIS ISN'T THE CASE WITH HASKELL, RIGHT?
+- keeping the core small increases the confidence that the important 
+  components of the lang are correct such as it's easy to type check, it's easy
+  to transform, optimise and complie.
+- the stat and dyn sem of TT are defined mutually since eval relies on a 
+  well-typed term and type checking relies on eval!
+- it's imp that terms are strongly normalising at compile time so any pattern
+  matching def which isn't guaranteed to be total does not reduce. run time eval
+  differs in that there is no reduction under binders, types and duplicated 
+  values have been erased and non-normalising defs may reduce.
+- pattern matching funcs can be understood as extending the core lang with
+  high-level reduction rules. WHAT DOES IT MEAN?
+- Girard's paradox: the type-theoretic analogue of Russell's paradox in set theory.
+- inductive families are a form of simultaneously defined collectin of algebraic
+  data types which can be paramterised ove values as well as types. 
+- strict positivity restriction ensures that recursive args of the constructore are 
+  structurally smaller than the value itself. this can be relaxed when defining 
+  families but defs using families which don't satisfy strict positivity will not
+  pass totality checking.
 
 
 Comments:
-
+- great paper to realise what goes on behind the scenes of developing a prog lang
+  like idris that is used in various applications both theorem proving and coding.
+  gives a great idea how to develop and think in terms of a lang and even while 
+  developing one.
+- knowing how idris is actually impled helps understand why some properties should
+  hold. not to mention that gives a better understanding of the lang and how should
+  on program in it. e.g.: defs not passing the totality checking due to using 
+  inductive families that violate the strict positivity.
+- why is that we can optimise total progs more aggresively? page 6
+- could we discuss the univers level of types! page 11
+- typo fig 4?
 
 In-meeting comments:
 
