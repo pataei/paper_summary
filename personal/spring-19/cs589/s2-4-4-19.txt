@@ -2,10 +2,30 @@ On the Criteria To Be Used in Decomposing Systems into Modules
 D.L. Parnas
 
 Summary:
-
+The paper discusses criteria used in modularization. The author considers
+a module to be a responsibility assignment rather than a subprogram which 
+just groups some functions together. The design decisions made before working
+on each module individually is modularization and the criteria introduced
+for modularization are supposed to reduce the development time (managerial), 
+untie making changes to different modules (flexibility), and enable 
+understanding the system one module at a time (comprehensibility). The paper
+compares two modularization approach over a case study where the first relies
+on the data flow in the system and the second relies on information hiding 
+among modules. Any small change in the format, size, and data structure of the
+data affects multiple modules of the first approach which isn't desirable. Hence,
+the author proposes basing modularization on design decisions and trying to 
+hide decisions from each other as a better development strategy of (specially) a
+large system.
 
 Notes:
-
+- too much transfer of control bw modules hurts efficiency. eventhough we can
+  use highly specialized and efficient transfers. This requires us to maintain 
+  several representation of the program.
+- good decomposition is different from hierarchical structure. we have a hierarchical
+  structure if a certain relation may be defined bw the modules or programs and that 
+  relation is a partial ordering. benefits of partial ordering: 1) parts of the 
+  system are simplified bc they use the services of lower levels 2) we are able to cut
+  off the upper levels and still have a usable and useful product. 
 
 Comments:
 
@@ -15,10 +35,33 @@ Class assignment:
 
 Discussion notes:
 Summary:
+The paper discusses criteria used in modularization. The author considers
+a module to be a responsibility assignment rather than a subprogram which 
+just groups some functions together. The design decisions made before working
+on each module individually is modularization and the criteria introduced
+for modularization are supposed to reduce the development time (managerial), 
+untie making changes to different modules (flexibility), and enable 
+understanding the system one module at a time (comprehensibility). The paper
+compares two modularization approach over a case study where the first relies
+on the data flow in the system and the second relies on information hiding 
+among modules. Any small change in the format, size, and data structure of the
+data affects multiple modules of the first approach which isn't desirable. Hence,
+the author proposes basing modularization on design decisions and trying to 
+hide decisions from each other as a better development strategy of (specially) a
+large system.
 
 Take homes:
+While modularizing a system think of information hiding among modules and not
+the data flow in your system and try to reduce the dependency among modules.
 
 Discussion questions/topics:
+- What are implementation and checkout time? 
+- Reling on information hiding requires us to maintain several representation of
+  the program which is costly in terms of developer time. How do we find the 
+  line between modularization and other resources like the developer time?
+- What's a pure compiler?
+- Decomposing a system along the classical lines of either a comiler or interpretor
+  isn't preferred but what if we are implementing a language or a program generator?
 
 Summary notes:
 Summary:
