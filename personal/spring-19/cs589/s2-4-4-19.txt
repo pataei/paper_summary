@@ -65,7 +65,44 @@ Discussion questions/topics:
 
 Summary notes:
 Summary:
+The paper states two modularization (design decisions made for a system) approaches.
+The first one (the conventional one) relies on the flowchart of the system, which is 
+a sequence of steps taken to get the desire behaviour of the system. The other one (
+the unconventional one) relies on information-hiding and data flow of the system. The
+second one reduces the interdependency of modules noticeably while it may not be as
+efficient as the first one in some cases.
 
-Take homes:
+Take home:
+Information-hiding is a good criteria when deciding how to modularize a system.
 
 Discussion highlights:
+- Modularization has disadvantages as well as advantages. Some of these costs are:
+  1) it's harder to optimise a modular system 2) it may reduces efficiency in some
+  cases 3) debugging may be harder because we don't know much about other modules 
+  and the underlying data structure they may be using. Some of the benefits are:
+  1) it's more usable 2) it's more extensible 3) it takes less time to debug because
+  modules are less dependent on each other and they only conduct one specific task
+  4) it saves time because different groups can work on different modules without 
+  requiring much knowledge of other modules and teams
+- In industry (both PL implementations and other systems such as a OS) people take 
+  different approaches towards modularity some of which result in more efficient 
+  systems which are harder to extend and add new features. For example, gcc (C 
+  compiler) isn't very modular but it's more efficient than its counterparts but
+  at the same time it's really hard to add new features to the language and expect
+  gcc to compile them. It's also hard to extend gcc to produce different architecture
+  because of its lack of modularity.
+- Basing modularity on flowchart is basically breaking down a problem to a sequence of
+  steps and considering each step as a module, which is a common approach. However, it
+  intertwins modules heavily which isn't desirable. On the other hand, relying on data
+  flow and using intermediate data structure to pass from a module to another is more
+  desirable in the sense that it hides implementation details of a module from others.
+  So although modules are still getting their inputs from other modules and passing their
+  outputs to other modules, they don't require to know about details and implementation 
+  decisions made for other modules. In other words, information-hiding increases cohesion
+  (i.e. puting things that conduct a task and are highly related to each other in one 
+  module) and decreases coupling (i.e. dependency of modules to each other s.t. if one
+  changes an implementation decision in a module they end up applying that change to 
+  multiple other modules). These can be considered as metrics to measure modularity.
+
+
+  
