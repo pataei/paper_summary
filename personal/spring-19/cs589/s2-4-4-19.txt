@@ -27,13 +27,10 @@ Notes:
   system are simplified bc they use the services of lower levels 2) we are able to cut
   off the upper levels and still have a usable and useful product. 
 
-Comments:
-
-
 -------------------------------------------------------------------
 Class assignment:
 
-Discussion notes:
+Summary notes:
 Summary:
 The paper discusses criteria used in modularization. The author considers
 a module to be a responsibility assignment rather than a subprogram which 
@@ -54,7 +51,7 @@ Take homes:
 While modularizing a system think of information hiding among modules and not
 the data flow in your system and try to reduce the dependency among modules.
 
-Discussion questions/topics:
+Questions/topics for discussion:
 - What are implementation and checkout time? 
 - Reling on information hiding requires us to maintain several representation of
   the program which is costly in terms of developer time. How do we find the 
@@ -63,7 +60,7 @@ Discussion questions/topics:
 - Decomposing a system along the classical lines of either a comiler or interpretor
   isn't preferred but what if we are implementing a language or a program generator?
 
-Summary notes:
+Disscusion notes:
 Summary:
 The paper states two modularization (design decisions made for a system) approaches.
 The first one (the conventional one) relies on the flowchart of the system, which is 
