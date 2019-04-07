@@ -1,0 +1,29 @@
+Programming with abstract data types,
+Barbara Liskov, Stephen Zilles
+
+Summary:
+
+
+Notes:
+
+
+
+----------------------------------------------------------------------
+Class assignment:
+
+Summary notes:
+Summary:
+
+Take home(s):
+
+Questions/topics for discussion:
+
+
+Discussion notes:
+Summary:
+
+Take home(s):
+
+Discussion highlights:
+
+
