@@ -2,27 +2,93 @@ Programming with abstract data types,
 Barbara Liskov, Stephen Zilles
 
 Summary:
-
+the motivation behind very-high-level PL is to ease the programming task
+by providing the programmer with a lang containing primitives or 
+abstractions suitable to their problem area. But there's no way that the
+lang designer knows all the developer's needs in advance. The paper 
+introduces built-in abstractions to be augmented when the need for a new
+data abst is discovered. This approach is an outgrowth of structured prog
+work. 
 
 Notes:
-
-
-
+- purpose of structured prog: enhance the reliability and understandability
+  of prgos.
+- purpose of high-level lang: increase proger productivity. which results in
+  increase of relaibility and understandability.
+- in very-high-level lang the developer can use the abstractions provided by
+  the lang without concerns to their implementation.
+- structured prog tries to reach well-structured progs.
+- both structured and very-high-level langs free the proger from concern with
+  details not relevant to the prblm they're solving.
+- however, in structured there's no notion of preconcived abstractions, 
+  instead, they provide a mechanism where the developer can extend abstr.
+- abst: a mechanism which permits the expression of relevant details and the 
+  supression of irrelevant details. in proging, the use of an abst is relevant
+  but the details of its implm is irrelevant.
+- abst data type: defines a class of abst objs which is completely characterized
+  by the operations available on those objs. these ops capture the behavior of 
+  objs classified in the abst data type.
+- abst data type is used at one level and realised at another. but the lower 
+  level doesn't come into existence automatically by being part of the lang.
+- operation cluster: an abst data type is realized by writing a special kind of
+  prog which defines the type in terms of the ops which can be performed on it.
+- the lang facilitates abst data types without its on-the-spot def by building 
+  links bw the use of a type and its def.
+- func using a functional abst only need to know what it does. so the knowledge
+  is just the name of the functional abst and ops which provide the services.
+- dijkstra's proging principles: build the prog one decision at a time.
+- logical strucute of a prog: the structure which is understandable and leads to
+  ease in modification and maintenance.
+- physical structure of a prog: the structure which is efficient to execute.
+- The abstract data type is introduced in a program to limit the distribution
+  of information about how the data is represented and stored.
+  
 ----------------------------------------------------------------------
 Class assignment:
 
 Summary notes:
 Summary:
+Very-high-level languages try to provide developers with abstractions that they
+need while solving a problem to increase programmer's productivity. On the other
+hand, structured programming contains general abstractions that results in
+well-structured programs that are more reliable and understandable. The 
+paper enhances the strucuted programming by introducing a language that has a 
+mechanism to extend abstractions used in the language by define an abstract data
+type as a class of abstract objects that is completely characterized by the operations
+available on those objects. These operations in fact describe the bahavior of the 
+objects. As a result, they relieve the developer from knowing details of how the
+data type is implemented and stored at the physical structure. The paper also
+introduces functional abstractions as abstract operations which are not included
+in the charactrization of the abstract data type but can be implemented as a
+composition of the data type's operations. This results in an improvement in 
+programming quality, they are more modular, easier to understand, modify, 
+maintain, and prove.
 
 Take home(s):
+Since it's imposible to envision all needs of developers using a language
+there should be a mechanism in the programming language to introduce new 
+abstractions such as abstract data types and functional abstractions to 
+both prevent the developer from foolish misuses of the language and also
+direct them to a better program design.
+
 
 Questions/topics for discussion:
-
+- The authors mention that the user is unable to make use of any implementation
+  details because the language they introduced is strongly typed. But isn't that
+  just because the abstract data types hide the implementation details and hence
+  the developer cannot use them? How is it related to the language being strongly 
+  typed?
+- Could we discuss strong typing and its impact on the language being dynamically
+  or statically typed? 
+- Being able to complete statice type checking depends on the language, right?
+  For example, we cannot type check a dependently typed language statically, right?
 
 Discussion notes:
 Summary:
 
+
 Take home(s):
+
 
 Discussion highlights:
 
