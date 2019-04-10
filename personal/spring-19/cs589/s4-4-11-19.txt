@@ -82,10 +82,32 @@ Notes:
   in time. modules with temporal binding tend to exhibit disadv of logically 
   bound modules but they tend to be simpler bc all the elements of a module are 
   executable at one time. 
-- communicational binding
-- sequential binding
+- communicational binding: modules with this binding are related by reference to
+  the same set of input and/or output data.
+- sequential binding: when the output data from an element is the input for the 
+  next element 
 - functional binding ?
+? if the elements of the module all contribute to accomplishing a single goal, 
+  then it is probably functionally bound. 
 - a func describes a transformation from some input data to some return data.
+- a module can include more than one type of binding.
+- predictable (well-behaved) module: a module that when given the identical 
+  inputs operates identically each time it's called.
+- black-boxness: the user can understand what the module does and use it wo
+  knowing what is inside it. a descriptive name and a well-defined and visible
+  interface enhances a module's usability and thus makes it more of a black box.
+- cost of modularity: execution time and memory space usage.
+- general prog design: deciding what functinos are needed for the prog.
+- detailed design: how to implement the functions.
+- unlike flowcharts the structure chart doesn't have decision blocks. and delays
+  conditional calls and decision later.
+- in order to reduce the effect of changes on the prog is to make the structure 
+  of the design match the structure of the problem, that is, form should follow
+  function.
+- scope of control 
+- scope of effect
+- the sys is simpler when the scope of effect of a decision is in the scope 
+  of control of the module containing the decision.
 
 ----------------------------------------------------------------------
 Class assignment:
