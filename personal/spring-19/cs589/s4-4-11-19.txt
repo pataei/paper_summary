@@ -3,24 +3,130 @@ W. P. Stevens, G. J. Myers, and L. L. Constantine
 
 Summary:
 The paper discusses structured design and the techniques used to get a
-more structured system. They introduce coupling and cohesiveness as 
-factors to measure modularity and good design of a system/problem. x
+well-structured system. 
 
 Notes:
-
-
+- benefits of fucntional modules: debugging and modifying programs,
+  reconfiguring I/O devices, and managing large programming prjs can 
+  all be greatly simplified. And, as the module library grows, 
+  increasingly sophisticated programs can be implemented using less 
+  and less new code.
+- structured design (composit design): a set of proposed general 
+  program design considerations and techniques for making coding, 
+  debugging, and modification faster, easier, and less expensive by
+  reducing complexity. They also enhance the documentation techniques.
+- general considerations of structured design: 1) simplicity w.r.t.
+  reduced debugging and modification time. simplicity increases by
+  dividing a problem into pieces that have the least interaction so
+  implementation, fixing, changing one module don't affect others as
+  much. 2) observability: the ability to easily perceive how and why 
+  actions occur 3) consideration of the effect of reasonable changes.
+* problem solving is hardest when all aspects of the problem must be
+  considered simultaneously.
+- module: a set of one or more contiguous program statements having a
+  name by which other parts of the system can invoke it and preferably
+  having its own distinct set of variable names.
+- connection: a reference to some label or address defined (or also 
+  defined) elsewhere.
+- ripple effect: where changes in one part cause errors in another, 
+  necessitating additional changes elsewhere, giving rise to new 
+  errors, etc. 
+- the complexity of a system is affected not only by the number of 
+  connections but by the degree to which each connection couples (
+  associates) two modules, making them interdependent rather than 
+  independent.
+- coupling: the measure of the strength of association established by 
+  a connection from one module to another.
+* complexity can be reduced by designing systems with the weakest 
+  possible coupling between modules.
+- coupling depends on 1) how complicated the connection is, 2) whether
+  the connection refers to the module itself or sth inside it, 3) 
+  what is being sent or received.
+- common environment: when two or more modules interface with the same area 
+  of storage, data region, or device. The structural characteristic of a 
+  common env is that it couples every module sharing it to every other such
+  module wo regard to their functional relationship or its absence. The 
+  impact of common envs on system complexity may be quantified.
+* a well-structured system, one in which communication is via passed 
+  parameters through defined interfaces, is likely to be more growable and
+  require less effort to maintain than one making extensive use of global
+  or shared variables.
+- connections that address or refer to a module as a whole by its name
+  (leaving its contents unknown and irrelevant) yield lower coupling than
+  connections referring to the internal elements of another module. 
+* Modules that can be used easily wo knowing anything about their insides 
+  make for simpler systems.
+- references to internal elements of other modules can have an adverse 
+  effect on prog modification, both in terms of cost and potential bugs. 
+- control-coupled modules where a module is passing an element of control
+  to another (such as flag, signal, or switch) affect the execution of the 
+  other module and not merely the data it performs its task. control coupling
+  where a called module tells its caller what to do is a more severe form of 
+  coupling.
+- coupling is reduced when the relationship among elements not in the same 
+  module are minimized. two ways of achieving this: 1) min the relationships
+  among modules and 2) max relationships among elements in the same module.
+  the second one is cohesiveness or binding.
+- binding classifications (lowest to highest): 1) coincidental 2) logical
+  3) temporal 4) communicational 5) sequential 6) functional. this scale isn't
+  linear. 
+- coincidental binding: there is no meaningful relationship among the elements
+  in a module. 
+* it is only fair to admit that, independent of a module's cohesiveness, there
+  are instances when any module can be modified in such a fashion to make it 
+  unusable to all its callers. however, the probability of this happening is 
+  very high if the module is coincidentally bound.
+- logical binding usually results in tricky or shared code, which is difficult
+  to modify, and in the passing of unnecessary parameters.
+- temporal binding is the same as logical, except the elements are also related 
+  in time. modules with temporal binding tend to exhibit disadv of logically 
+  bound modules but they tend to be simpler bc all the elements of a module are 
+  executable at one time. 
+- communicational binding
+- sequential binding
+- functional binding ?
+- a func describes a transformation from some input data to some return data.
 
 ----------------------------------------------------------------------
 Class assignment:
 
 Summary notes:
 Summary:
-Used the summary above.
+The paper discusses general considerations, guidelines, and techniques for 
+structured design
+to make coding, debugging, and modification easier, faster, and less expensive
+by reducing complexity of the system. The number of 
+connections between modules and their degree determines the system complexity. 
+The more modules are interdependent (i.e. refering to each others internal 
+details), the higher the coupling and hence the more complex the system is. 
+While coupling requires elements within different modules to have as minimum
+as possible relationship with each other to achieve a simpler system, 
+cohesiveness focuses on the relationship of elements of a module and requires
+them to have as close of a binding as possible to result in a simpler system.
+There are different classifications of binding out of which functional binding
+is the strongest binding.
+
 
 Take home(s):
-
+- The higher the cohesiveness and lower the coupling, the better the structure 
+  of the system is.
+- In a well-structured system, communication among modules is based on passing
+  parameters through the defined interface.
+- "Problem solving is hardest when all aspects of the problem must be
+  considered simultaneously."
+- At the end of the day, modularity comes with some costs such as execution
+  time and memory space usage. However, there are ways to improve them
+  if the developer is aware of them.
+  
 Questions/topics for discussion:
-
+- Is there a systematic way to find the weakest possible coupling 
+  between modules or are we just supposed to follow some guidelines
+  and hope that it works out? I.e., do we ever actually know if we have
+  the weakest possible coupling between our modules or we just think
+  we do?
+- Stupid question, what do we exactly mean by interface when we're
+  saying that coupling increases with increasing obscurity of the interface?
+- What is exactly functional binding? They don't have a very clear definition of it.
 
 Discussion notes:
 Summary:
