@@ -86,4 +86,12 @@ In-meeting comments:
 - Martin:
   - SPJ book for a better understanding of compilation
 
+In-meeting comments (4/10/19):
+- contraction is only one step while reduction can be multiple steps.
+- type checking relies on evaluation but this doesn't mean that the compile
+  and runtime of the program are combined. They're still separate except that
+  the first step (compiling) is messier in the sense that you need to evaluate
+  some expression to do the compiling and then move to evaluation.
+- type_0 is the set of all plain types.
+- the App rule looks innecent but it's quite tricky.
 
