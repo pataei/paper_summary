@@ -2,7 +2,9 @@ Structured Design,
 W. P. Stevens, G. J. Myers, and L. L. Constantine
 
 Summary:
-
+The paper discusses structured design and the techniques used to get a
+more structured system. They introduce coupling and cohesiveness as 
+factors to measure modularity and good design of a system/problem. 
 
 Notes:
 
