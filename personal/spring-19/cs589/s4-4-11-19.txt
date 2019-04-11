@@ -104,8 +104,10 @@ Notes:
 - in order to reduce the effect of changes on the prog is to make the structure 
   of the design match the structure of the problem, that is, form should follow
   function.
-- scope of control 
-- scope of effect
+- scope of control of a module: the module plus all modules that are ultimately 
+  subordinate to the module.
+- scope of effect of a decision: the set of all modules that contain some code 
+  whose execution is based upon the outcome of the decision.
 - the sys is simpler when the scope of effect of a decision is in the scope 
   of control of the module containing the decision.
 
