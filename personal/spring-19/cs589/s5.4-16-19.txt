@@ -1,5 +1,4 @@
-
-
+On Understanding Data Abstraction by Cook
 
 Summary:
 
