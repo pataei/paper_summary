@@ -95,3 +95,7 @@ In-meeting comments (4/10/19):
 - type_0 is the set of all plain types.
 - the App rule looks innecent but it's quite tricky.
 
+In-meeting comments (4/17/19):
+- the second premise of the Lam rules needs the Forall rule if S is an 
+  application type.
+- good conversation. taking David's course really helped understanding the paper!
