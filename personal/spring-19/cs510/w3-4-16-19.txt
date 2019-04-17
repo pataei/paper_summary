@@ -1,0 +1,9 @@
+ An algorithm for type-checking dependent type
+ by Thierry Coquand
+ 
+ 
+ Summary:
+ 
+ Notes:
+ 
+ Comments/questions/ideas:
