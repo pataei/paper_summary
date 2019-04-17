@@ -1,0 +1,9 @@
+Local type inference
+by Pierce and Turner
+
+Summary:
+
+Notes:
+
+Comments/questions/ideas:
+
