@@ -1,22 +1,111 @@
 On Understanding Data Abstraction by Cook
 
 Summary:
-
+refer to the class assignment!
 
 Notes:
-
-
+- Objects and ADTs aren't the same thing and neither one is a variation
+  of the other. They are fundementally different and in many ways 
+  complementary, in that the strengths of one are the weaknesses of the other.
+- data abst refers to any mechanism for hiding the implementation details of
+  data.
+- an algebra in math has a sort or collection of abst values and operations
+  to manipulate the values. 
+- the characteristic function for a set maps a domain of values to a boolean 
+  value, which determines whether or not the value is included in the set.
+- algebras relate to ADTs, while characteristic functions are a form of object.
+- an ADT has a public name, a hidden rep, and operations to create, combine,
+  and observe values of the abstr.
+- fundamental characteristic of abstraction: sth is visible on the surface, 
+  but the details are hidden.
+- there can only be one implementation of an ADT in any given program.
+- all values from a given implementation share the same rep type, altho there 
+  can be multiple different representational variants within the type by 
+  defining sum types.
+- ML has a module system that allows multiple impls for a given signature.
+- ADTs have sound proof techniques. 
+- from a type theory viewpoint, ADTs have a fundamental model based on existential
+  types.
+- ADTs have a solid connection to mathematics. 
+- object interfaces do not use type abstraction: there's no type whose name 
+  is known but rep is hidden.
+- objects use procedural abstraction to hide behaviour.
+- obj interfaces are essentially higher-order types, in the same sense that 
+  passing functions as values is higher-order. 
+- dynamic building: selecting a function to invoke from a record containing 
+  function values.
+- both ADT has two levels: 1) set implementations 2) set values. objects have
+  two levels: 1) interfaces 2) classes. a class is a procedure that returns a 
+  value satisfying an interface.
+- autognostic: an obj can only access other objects through their public interfaces.
+- the author considers the prohibition of inspecting the rep of other objects as one
+  of the defining chracteristics of oop. and he calls it autognostic.
+- autognosis menas self knowledge. an autognostic obj can have detailed knowledge of
+  itself. all other objs are abstract. 
+- the converse of autognosis is quite useful. any prog model that allows inspection
+  of the rep of more than one abstr at a time is not oo.
+- an autognostic sys is much more flexible but it's also more difficult to
+  optimize.
+- obj interfaces do not prescribe a specific rep for values but instead accept any
+  value that implements the required methods.
+- ADTs have a private, protected rep type that prohibits tampering or extension.
+  objects have behavioral interfaces which allow def of new impls at any time.
+- extending an obj interface with more public methods can significantly improve
+  performance, but it also tends to reduce flexibility.
+- oop has caused significant prblms for verification efforts. which isn't surprising
+  given that oop is higher-order procedural programming, objs are a form of first-class
+  value.
+- an obj is a value exporting a procedural interface to data or behavior. objs use
+  procedural abst fro info hiding, not type abstr.
+- type systems only enforce structural properties of programs. they don't ensure
+  conformance to a specification. The type system prevents outside clients from 
+  tampering with the implementation.
+- While objects are more simple and extensible, ADTs are more flexible.
+- ADTs facilitate adding new operations while objects facilitate adding new
+  representations. (the expression problem)
+- Haskell provides abstraction and information hiding by parametricity.
+- oo langs do not always support the sums of products data structures found
+  in other langs but such types can be simulated using an abstract class with a 
+  subclass for each variant in the sum type. pattern matching on these types
+  can then be implemented by using instanceof and appropriate casts. 
+- type classes are similar to obj interfaces in allowing a method to operate 
+  on any value that has the necessary operations. 
+- type classes do not enforce any hiding of reps. As a result, they provide 
+  parametric abst over type signatures without the info hiding aspect of ADTs.
 
 ----------------------------------------------------------------------
 Class assignment:
 
 Summary notes:
 Summary:
+The paper discusses two forms of data abstraction, abstract data types
+and objects. It also dives deep into their fundemental differences and how
+they complement each other:
+- The author emphasizes that they are in fact both
+  a form of data abstraction that are solidly grounded on mathematical concepts,
+  while ADTs relate to algebras, objects relate to characteristic functions. 
+- While ADTs rely on type abstraction for information hiding, objects rely on
+  procedural abstration. 
+- While objects define data abstraction in a dynamically typed language, ADTs
+  depend on a static type system to enforce type abstraction.
+- Because of the reliance of ADTs on static type system, outside clients cannot
+  tamper with ADTs (they cannot extend the ADTs type abstraction). This results
+  in the expression problem between objects and ADTs.
 
 Take home(s):
+- ADTs and objects both are a form of data abstraction.
+- While objects are more simple and extensible, ADTs are more flexible.
+- ADTs facilitate adding new operations while objects facilitate adding new
+  representations. (the expression problem)
+- Haskell provides abstraction and information hiding by parametricity.
 
 Questions/topics for discussion:
-
+- The author states that a complaint about OOP is that it's impossible to determine
+  what code will be executed when invoking a method, which in his opinion is 
+  the same with functional programming languages such as ML and Haskell. Could we
+  discuss this please?
+- How are pure functional objects quite common? Could someon give an example?
+- How was the untyped lambda calculus the first OO language?
 
 Discussion notes:
 Summary:
