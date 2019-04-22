@@ -1,0 +1,24 @@
+Harper and Pierce, Design Considerations for an ML-Style Module System, 
+from Advanced Topics in Types and Programming Languages, 2005 
+Sections 8.1–8.4
+
+Notes:
+
+
+--------------------------------------------------------------------
+In-calss assignment:
+
+Summary notes:
+Summary:
+
+Take home(s):
+
+Questions/topics for discussion:
+
+
+Discussion notes:
+Summary:
+
+Take home(s):
+
+Discussion highlights:
