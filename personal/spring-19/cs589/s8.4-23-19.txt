@@ -3,7 +3,28 @@ from Advanced Topics in Types and Programming Languages, 2005
 Sections 8.1–8.4
 
 Notes:
-
+- module: parts of manageable size when breaking down a large prog.
+- module (structure): a collection of components which may include procedure
+  or function definitions, variable declarations, type definitions, and
+  initialization code.
+- methodology of modularity: how best to decompose progs into modules with
+  a variety of desiarable engineering characteristics.
+- abstract types arise by sealing a module with a signature that selectively
+  suppresses the definitions of its type components. 
+- root module: the main entry point of the prog.
+- linker task: compose a complete prog by resolving external references,
+  creating module bindings for each of the external references in the partial
+  prog under construction until no unresolved references remain.
+- signature (interface): describes the externally visible components of the 
+  module that is some other module is depending on.
+- a prog consists of bindings, each of which is either a module binding or a
+  signature binding.
+- module binding: binds the variable to a modue expression, perhaps with a 
+  specified signature.
+- basic signature: consists of a sequence of component declarations, either a 
+  type decl or a value decl.
+- prinicipal signature: the most precise signature implemented by a module.
+- 
 
 --------------------------------------------------------------------
 In-calss assignment:
