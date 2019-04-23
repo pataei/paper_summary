@@ -10,10 +10,44 @@ In-calss assignment:
 
 Summary notes:
 Summary:
+The chapter so far discussed mechanism of supporting modular programming.
+based on a typing system for modularity grounded in the framework of TAPL.
+It introduces lots of terminologies such as module, root module, 
+signature, external reference, external and internal name, basic signature,
+principal signature, signature matching (and its two styles: structural 
+and nominal), two methods
+of compilation: separate and incremental, cut-off compilation, linker, 
+linking context, resolving external references, reference dependencies, 
+initialization dependencies, definite and indifinite external reference,
+phase distinction, firts- and second-class modules.
 
 Take home(s):
+The overal take home of the chapter for me was the need to have
+a type system for the modularity system of a language and that we can 
+implement a modularity system for a language based on different factors, 
+some features of the language dictate some features of the modularity 
+system (eg.: whether we have first- or second-class modules depends on the
+language being statically typed or what they define as dependent typed 
+language), while for some other features of the modularity system we can
+decide based on the criteria we're looking for the system (eg.: whether 
+we choose separate compilation or incremental). And of course, there are
+some features that are just shared among all modularity systems (eg.:the 
+order of bindings of modules depends both on reference dependencies and 
+initialization dependencies).
 
 Questions/topics for discussion:
+- What compilation system is GHC (separate or incremental)? (My thought: separate)
+- "A module system that lacks prinicipal signatures cannot properly
+  support incremental compilation." Is this because we can reduce the problem
+  of checking whether a module implements a signature to checking the subtype 
+  relation between the given signature and the module's principle signature and
+  in incremental compilation the compiler consults the implementation of a 
+  module to determine its signature and so if we cannot reduce the problem then
+  it's undecidable?!!
+- What's the relationship between statically typed languages, dynamically 
+  typed languages and dependet typed languages with respecting or violating
+  the phase distinction? (They're definition of dependent typed languages 
+  seems to be different from my understanding!!)
 
 
 Discussion notes:
