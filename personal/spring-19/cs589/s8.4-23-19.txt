@@ -24,7 +24,44 @@ Notes:
 - basic signature: consists of a sequence of component declarations, either a 
   type decl or a value decl.
 - prinicipal signature: the most precise signature implemented by a module.
-- 
+- signature matching: the subtyping relation between the description of 
+  modules (ie. their signature), denoted by I <: J. I is sub-signature of
+  J only if any module implementing I also implements J, i.e., I is more 
+  specific (states stronger requirements on an implementation) than J.
+- two methods to signature matching: 1) structural: based on the 
+  requirements imposed by the signature without requiring any declarations.
+  2) nominal: based on the explicit declaration of subtyping relationships
+  among signatures.
+- structural matching is more felxible but nominal is simpler.
+- few module langs have rinicpal signatures. reason: the lang of sig may be
+  too weak to permit a precise description of the properties of a module.
+- complete progs don't have free variables!
+- distinguish bw module expression and module value! e.g: 
+  module p = mod { 
+    val f = ...
+  } 
+  is a module expr and not value. each time the expression mod ... is evaluated
+  a new cell is allocated and a different module value results.
+- most imp aspect of exe is linking.
+- they model linking as a process of binding modules to module variables.
+- separate compilation: the sig of free module vars are explicitly given by the 
+  programmer
+- incermental compilation: the compiler infers the sig of free module vars from the 
+  source code of the referenced module
+- cut-off compilation: if the source code of a module has changed but its sig hasn't
+  then there's no need to recompile modules that depend on it, i.e., recompilation 
+  may be cut off at that point.
+- separate compilation affords maximal flexibility but it places a buden on the linker 
+  to ensure that the binding of a module var implements the presumed sig.
+- the impl of any externally module must be present in incremental compilation in order
+  to compile the referring module. Hence, a module sys that lack principal sig cannot 
+  properly support incremental compilation.
+- linking context: the collection of module bindings
+- the order of module bindings depends both on reference dependencies and 
+  initialization dependencies.
+- statically typed langs respect the phase distinction.
+- first-class module expression: its type components aren't determined until run time.
+- the distinction bw the first- and second- class module is a matter of eval bahavior.
 
 --------------------------------------------------------------------
 In-calss assignment:
