@@ -31,5 +31,11 @@ Comments:
     higher-order functions without treating them as macros?
 
 In-meeting comments:
-
+- Eric:
+  - you should never do this in your own code. the compiler does this
+  - this is a very low level alg that basically manages cell allocation...
+- Martin:
+  - it eliminates constant factors like pointers
+  - this isn't that much of big problem in lazy lang as it is in strict langs
+  
 
