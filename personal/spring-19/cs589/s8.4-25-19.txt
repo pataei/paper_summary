@@ -3,7 +3,8 @@ from Advanced Topics in Types and Programming Languages, 2005
 Section 8.5, The Pragmatics of Functors from 8.8
 
 Notes:
-
+- transparent signature: reveals the definitions of the type components.
+- 
 
 --------------------------------------------------------------------
 In-calss assignment:
