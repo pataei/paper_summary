@@ -2,13 +2,33 @@ Deforestation: Transforming programs to eliminate trees
 @https://link.springer.com/content/pdf/10.1007/3-540-19027-9_23.pdf
 
 Summary:
-
+The paper introduces the deforestation algorithm to eliminate the
+intermediate results of programs. Although at this state the lang
+they're considering is rather restricted. they claim that this eases
+the task of the compiler writer. or even more importantly, the task of 
+the compiler user, bc it's easy to charcterise what sort of expression 
+will be optimised and what sort of optimisations will be performed.
 
 Notes:
-
+- first-order langs may be easier to cope with. but higher-order funcs 
+  more expressive. higher-order macros try to provide some of the 
+  expressiveness of higher-order funcs but of course not all of them. 
+- the POWER of higher-order lang is deesirable.
+- functional programs are eminently suited for prog transformation.
 
 Comments:
-
+- the stress of the term is getting to me!! I stressed read it and
+  not even completely but I enjoyed the last section on higher-order
+  macros and I'm a bit confused by it. I understand the motive behind
+  eliminating the intermediate results but I'm not so sure that it's 
+  even practical in complicated systems!
+- I'd also usually google these but I don't have the time so if anyone
+  knows:
+  - what is lambda lifting?
+  - so is higher-order macros and the treeless ex of flatten kind of 
+    reminds me of primitive recursion, am I confusing stuff or ...?
+  - Ameya do you know if there's any work that does deforestation on 
+    higher-order functions without treating them as macros?
 
 In-meeting comments:
 
