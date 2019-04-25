@@ -121,6 +121,24 @@ Take home(s):
   For example, identifying that we cannot have transparent type declarations with 
   first-class modules. Since first-class modules are analogous to well-designed objects
   that follow procedural abstraction properly where we cannot leak type information.
-
+- Sealed first-class modules are basically what Cook considers as true objects that 
+  provide procedural abstractions.
+  
 Discussion highlights:
-
+- Determinate and indeterminate module expressions are meaningful when we have static
+  typing, i.e., we want to know type information statically. Determinate module 
+  expressions provide us with this static information while indeterminate ones don't.
+- The avoidance problem essentially is when the variable introduced in a 
+  specific scope (like a let expression) leaks out of that scope.
+- Generative functors are safer since every time they're instantiated a new value is
+  bound to the module while this isn't the case for applicative functors which makes
+  applicative functors more convenient but also risky at times. The SML module system
+  uses generative functors.
+- Type abstraction provide us with a name to refer to the representation of types in 
+  other places. While existential types give us true procedural abstraction where we 
+  can only refer to operations conducted on them and not their representation.
+- Translucent signatures give us the option of choosing when to seal our modules, i.e.,
+  they allow us to choose what information we want to leak and what information we 
+  want to seal and when we want to do that while at the same time working in a static
+  paradigm. This is really powerful although isn't desirable (or possible to be exact)
+  when we have first-class modules.
