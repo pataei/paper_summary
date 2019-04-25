@@ -103,7 +103,24 @@ Questions/topics for discussion:
 
 Discussion notes:
 Summary:
+This section of the chapter generally discusses problems that arise when designing
+a module system and provides different approaches that one can take based on their
+requirements. For example, there are three different solutions to the avoidance 
+problem: 1) disallowing problems that causes this problem 2) instead of disallowing
+all such programs, allow the ones that provide the principal signature of the module
+that uses the module variable defined in some specific scope and 3) shifting the burden
+to the programmer by requiring them to state the signature of every module explicitly. 
+
 
 Take home(s):
+- Familiarity with issues around modular systems and different approaches to deal with 
+  them such as (in)determinism when we have
+  static typing; the avoidnace problem; transparent, opaque, and translucent type 
+  declarations; sealing modules; and module families (functors).
+- Recognizing the consequence of decisions that one makes while desiging a module system.
+  For example, identifying that we cannot have transparent type declarations with 
+  first-class modules. Since first-class modules are analogous to well-designed objects
+  that follow procedural abstraction properly where we cannot leak type information.
 
 Discussion highlights:
+
