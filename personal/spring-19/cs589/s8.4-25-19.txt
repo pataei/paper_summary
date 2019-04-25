@@ -4,18 +4,102 @@ Section 8.5, The Pragmatics of Functors from 8.8
 
 Notes:
 - transparent signature: reveals the definitions of the type components.
+- dadv of transparent sig: 1) a first-class module expression cannot
+  impl a transparent sig 2) if we limit ourselve to transparent sigs 
+  we imped modular programming by creating tight dependenciesbw modules
+- we can allow abstract (opaque) type declarations in our modules to 
+  reveal the existence of a type component but not its definition. as
+  opposed to concrete (transparent) type declarations.
+- an abst type decl holds its type abstract i.e. it hides its rep.
+- translucent sig: type decls may be either concrete or abstract
+- sigs with abstract type decls are similar to existential types.
+- translucency suports rep independence in much the same manner as do
+  existential types.
+- translucent sigs support a flexible form of data abstr, permit 
+  formation of first-class module expressions and they're crucial for
+  permitting fine-grained control over the propagation of type definitions 
+  in hierarchical and parametreized modules while maintaining static 
+  typing.
+- the sig matching relation needs to be generalized to permit forgetting
+  of type defs: an abst type decl in a super-sig may be matched by wither 
+  an abst or a concrete type decl in the sub-sig.
+- sealing: to limit the visibility of the type components of a module to 
+  the degree specified by a signature, we seal the module with the sig.
+- a sealed module expression M :> I is well-formed only if M implements I.
+- a sealed module is evaluated by stripping off the seal and evaluating the
+  underlying module. which reflects the informal idea that data abst is
+  relevant only during type checking and has no significance at run time.
+- consequence of sealing modules with abstract type components is that sigs
+  may contain unavoidable dependencies on modules.
+- rep independence: ensures the behavior of clients are insulated from the 
+  details of the impl of an abstr.
+- determinate module expressions: type component are statically known. hence
+  we're capable of selecting types.
+- basic module expressions including module values are determinate
+- sealed modules are indeterminate.
+- A natural representation of a family of modules is as a λ-abstraction of a 
+  module expression over a module variable of a specified signature. Such an 
+  abstraction is called a parameterized module, or functor.8 Instances of the 
+  family are obtained by functor application.
+- motivation behind functors: 1) functors arise naturally in shared libraries.
+  2) many progs are naturally functorial in nature. 3) some of link time 
+  techniques are commonly used to achieve effects similar to those of functors.
 - 
-
 --------------------------------------------------------------------
 In-calss assignment:
 
 Summary notes:
 Summary:
+This section of the chapter focuses on various kinds of type declarations.
+Transparent type declarations in a signature where we reveal both the type 
+declaration and its definition. As a solution to issues raised from transparent
+type declaration, abstract type declarations have been introduce to hide type 
+representations. A way to soften the restriction of opaque type declarations
+is to allow for both concrete and abstract type declarations in a signature,
+such a signature is called a translucent signature. 
+
+Next, the authors discuss sealing a module with a signature and its consequence:
+signatures may contain dependencies on modules. They then discuss reasons to 
+prohibit type selection such as undecidability of module equivalence and to be
+able to ensure type safety when we have first-class module expressions. This 
+results in introducing determinate (where type components are statically known) 
+and indeterminate module expressions. Hence, we avoid violating the abstraction
+of a module expression by just allowing type selection for determinate module
+expressions.
+
+They then introduce the avoidance problem is finding the least signature in a 
+let expression of the form `let module m = M in M'` such that it doesn't have
+bounde module variables to m. This is a central design 
+issue for module systems to support data abstraction. Since there isn't an 
+algorithm to detect prinicpal signatures we shift the burden to programmer to
+specify such a signature. Finally, the authors discuss the motivations behind 
+functors (module families) and other mechanisms that could address the same 
+issues that functors address such as Haskell type classes.
 
 Take home(s):
+- The new terms: transparent vs abstract type declaration,
+  translucent signatures, sealing a module with a signature, determinate and 
+  indeterminate module expression and their relation to type selection, the 
+  avoidance problem, module families (functors).
+- Module equivalence is undeciadable which is one reason to prohibit type selection.
+
 
 Questions/topics for discussion:
-
+- Could we discuss how the abstract type formalization in the chapter differ
+  from conventional existential types? (page 311) My understanding: existential
+  types limit the scope of the representation of their abstraction while 
+  abstract types here don't do that, i.e., they have a open scope. The closed
+  scope of abstraction in existential types causes problem when we have 
+  translucent sums because now we need to be able to reference our abstraction
+  which we cannot in the case of existential types. 
+- what is type selection? is it just say m.X?
+- Is it right to say "a first-class module can only be well-formed if we seal 
+  it with an interace"? Or is that just the case when we have indeterminate 
+  module expression? (page 313)
+- How is it that binding an indeterminate module expression to avariable makes
+  referring to components of it through the variable possible? Is it because 
+  we're shifting the reference to the components to run time instead of the 
+  compile time?
 
 Discussion notes:
 Summary:
