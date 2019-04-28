@@ -3,6 +3,77 @@ Ostermann et al.
 
 
 Notes:
+- goal of modularity isn't clear. two views: 1) information hiding, results
+  in procedural/functional abstraction and abstract data types 2) 
+  emphasization on extensibility and separation of concerns at the expense
+  of info hiding eg: prog decomposition using inheritance, reflection, 
+  exception handling, aspect-oriented proging, mutable state and aliasing.
+- notion of info hiding comes from PL community.
+- classical logic = first-order predicate logic.
+- the limitations of classical logic as a rep formalism of human knowledge
+  is well-known.
+- modularity: the degree to which a sys is composed of indep parts, whereby
+  indep implies reusabilityk, separate understandability and etc.
+- separation of concern: if code is localized in a single component of a sys.
+- info hiding: the distinction bw the interface of a software component and 
+  its impl. 
+- the interface specification should be weaker than its impl. so we can have
+  one interface and multiple impl for it. and an impl can have multiple 
+  interfaces too. 
+- we may need some heuristic to hide what is likely to change. Parnas 
+  suggested some heuristic. (Ghadeer's paper)
+- successfult info hiding is limited by the degree of separation of concerns,
+  the inherent complexity of the system, and the need to support software 
+  evolution.
+- proof theory in classical logic is the syntactic view.
+- the model theory in classical logic is the semantic view.
+- the two views (syntactic and semantic) are related by soundness and 
+  completeness theorems.
+- info hiding suuports modular reasoning and indep evolution of the hidden
+  parts of a component. which highly depends on the developer's choice of 
+  hidden parts which should be based on which parts are most likely to change.
+- hence the interface acts as a kind of firewall that prevents the propagation
+  of change.
+- abstraction: generalization of concrete to parametrized components that can
+  ve instantiated again. --> promotes code reuse.
+- substituability: a module's impl can be replaced by a diff impl adhering to
+  the same interface.
+- info hiding shows up in: structured proging, procedural and functional abstr,
+  oop, and data abstr mechanisms.
+- logically, ADT are a type of existential quantification.
+- the interface corresponds to a set of axioms, the impl of the interface 
+  corresponds to a model of the axioms.
+- reductionsim: a complex system can be understood completely by understanding
+  its parts and the rules  with which they are composed. --> the implicit asmpt
+  underlying classical modularity.
+- a semantic is compositional if the meaning of a complex expr is fully 
+  determined by the meanings of its constituent exprs.
+- homomorphism and morphism: structure-preserving maps.
+- compositionality implies a strong notion of substituatability ==> i.e.
+  equational reasoning.
+- classical logic is compositional in teh sense taht a subset of the axioms
+  of the theory can be exchanged by other axioms if they are logically equiv.
+- in pl compositionality is the hallmark of denotational sem and initial 
+  algebra semantics. 
+- absrt notion = idea
+- our understanding (= the interface) of a module is an idealization of the 
+  actual impl of the module. interfaces are idealization in the sense that 
+  they assume that some aspects of the impl are not relevant.
+- monotonicity: we want to prove things once and for all.
+- eg of monotonicity: if we establish a property of a sys in a monotonic logic
+  we neve have to revise that property when more components are added to the sys.
+- programmers infer some property by just testing their prog on a some data. this
+  is against classical logic bc only a failed test case produces new knowledge.
+- all basic theories in natural sciences are essentially the product of inductive
+  reasoning.
+- progers tend to use the simplest explanation they can imagine for an 
+  experienced phonomenon. although, they regard such explanations tentative, i.e.,
+  they infer them nonmonotonically and revise them when contradiction evidence is 
+  discovered. this may be the cause of some debugging effort. 
+- the Occam's razor is the hard-wired human behavior.
+- negation-as-failure: deduce a property `not P` from failure of proving P.
+- closed-world reasoning is required in many aspects of software such as temporal
+  or concurrency properties.
 
 
 ---------------------------------------------------------------------
@@ -10,11 +81,34 @@ In-calss assignment:
 
 Summary notes:
 Summary:
+The paper states two different views towards modularity: 1) based on 
+information hiding and 2) based on program decomposition and separation of 
+concerns. These two views often tend to violate/weaken the other one. The
+paper focuses on the relation between these two views by relating them to 
+a corresponding logic. While the first view closely correesponds classical 
+logic, the second one relates to non-classical logic. The authors claim that
+the second view aligns much better with human reasoning and knowledge.
+
+In section 2, the authors point out the principles and assumptions of 
+classical logic. They then discuss various aspects and views of information
+hiding (such as abstraction, compositionality, idealization, and monotonicity) 
+and relate them to principles and concepts of classical logic. 
+
+In section 3, the authors focus on natural manner that human reason (such as
+inductive reasoning, negation-as-failure, and closed-world reasoning) and they
+claim that is mostly nonclassical reasoning which are not compatible with 
+classical logic and hence threaten the assumption of classical modularity. As 
+a result, the power of classical modularity is rather limiting since it's 
+naturally in contradiction to human reasoning and knowledge.
 
 Take home(s):
-
+- Human reasoning and knowledge is more close to nonclassical logic (e.g.: 
+  closed-world assumption, inductive reasoning, etc)
+- Classical modularity (which focuses on the notion of information hiding) 
+  corresponds to classical logic. 
 
 Questions/topics for discussion:
+- I didn't grasp actual denotation. What is exactly? (right before S2.3)
 
 Discussion notes:
 Summary:
