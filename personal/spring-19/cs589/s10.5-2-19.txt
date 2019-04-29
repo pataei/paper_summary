@@ -3,18 +3,72 @@ Ostermann et al.
 
 
 Notes:
-
-
+- if a stakeholder want to reason about nonfunctional aspects of a sys
+  (like time or space complexity or power consumption) he needs to reason
+  about impl details hidden behind abstr.
+- by strengthening the interface, the distinciton bw interface and impl is 
+  weakend and info hiding is rendered useless. 
+- qualification prblm: having to state too many properties explicitly to 
+  reason about an API.
+- the success of info hiding depends on whether such potential stakeholders
+  and their info needs are relevant for the sys or not. 
+- OS and kernel usually contain lots of interdependent parts. they require
+  so much knowledge about each others impl that thre remains little to hide.
+- last ph of S4.2 is highly related to our extra ppr pres!!! which says:
+  another issue of large systems arises with crosscutting concerns such as
+  transactions or concurrency (or features for that matter). This violates
+  the basic assumption of logical modularity, namely monotonicity. the 
+  noncomposability can in general not be deduced form the interfaces of these 
+  components. hence, the monotonicity assumption of classical modularity fails
+  when concerns are not properly separated.
+- what can be hidden behind an interface depends on the choosen decomposition,
+  but there is no best decomposition.
+- the original developers have to anticipate change and to modularize the sys 
+  accordingly.
+- the mere assumption of a monolithic global plan is contradictory to modularity.
+- we cannot consider software a model, instead we should consider more as a 
+  "mix of overlapping and interacting models". because we should consider the 
+  desires and needs of many different stakeholders.
+  
 ---------------------------------------------------------------------
 In-calss assignment:
 
 Summary notes:
 Summary:
+In the rest of the paper, authors discuss the limitations of inofrmation
+hiding notion of modularity based on classical logic. For example, one 
+cannot conduct nonfunctional reasoning without knowing the details of 
+implementation. The need to access information that we're hiding becomes
+more essential in large systems since there is a huge chance that the 
+information that we're hiding becomes of importance to a stake holder. 
+The biggest problem is the dilemma when software evolves: should we hide a 
+decision and deal with a new stakeholder need when they need such information
+or should we expose a decision and be stuck with the fact that we cannot 
+change it later on or we'd be violating modularity. As a result of these
+problems and due to the fact that we cannot consider software a model, 
+instead we should consider more as a "mix of overlapping and interacting 
+models", the authors suggest some initial steps towards nonclassical modularity.
+The authors close by giving some examples of correspondence between 
+nonclassical logic and programming both in terms of mechanisms and motivations.
+They encourage the readers to make use of the connection between programming
+and logic even when it comes to modularity.
 
 Take home(s):
-
-
+- The strict information hiding is problematic while designing large systems
+  because the chances are there exists a stakeholder that needs the information
+  that we're hiding. This gets more problematic when there exists crosscutting
+  concerns in the system such as concurrency, features, or transactions.
+- It's not clear in advance that which design decisions need to be hidden
+  and which should be exposed (or separated). This may change over time depending on the
+  evolution of software and/or evolution of stakeholders needs. This is the main
+  problem of classical modularity.
+- We should always be mindful of the connection between our programming 
+  languages and logic and use them in our advantage to construct better systems.
+  (It's always interesting to see the connection between these two fields!)
+  
 Questions/topics for discussion:
+- Why is it that if what is hidden behind an interface is a concern, then the 
+  better separation of concerns reduces the amount of information hiding?
 
 Discussion notes:
 Summary:
