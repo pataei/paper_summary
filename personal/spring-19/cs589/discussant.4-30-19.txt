@@ -9,11 +9,48 @@ In-calss assignment:
 
 Summary notes:
 Summary:
+The paper discusses program families as families of programs that their
+shared properties are more extensive than their individual properties.
+One could take different approaches towards developing such programs 
+including the traditional sequential development (where the developer
+focuses on developing a complete program first and then deriving
+various versions by using the first complete program and making new
+decisions), stepwise refinement (where the intermediate representations
+which are programs themselves use 
+abstract notation to postpone decision making), and module specification 
+(where intermediate representations are incomplete programs that specify
+the externally visible behavior of program groups, i.e. modules). While 
+the stepwise refinement provides us with a narrow family, the module 
+specification approach gives us a broader family. The difference between
+these two approaches is essentially what decisions we make in advance
+and when we make them. The module specification approach trives to 
+achieve a modularity system such that the dependency between different
+development groups reduces (designing a good modularity system usually 
+requires lots of efforts). While the stepwise refinement makes 
+implementation decisions step by step by implementing the abstraction
+that have been introduced earlier. In both of these approaches, we're
+predicting some decisions which may at some point change. However, how we 
+recover to a previous version differs in them.
 
 Take home(s):
-
+- Stepwise refinement and module specification methods do not contradict
+  each other, they rather compliment one another.
+- Whatever approach we choose in our development we end up making some
+  decisions. What decisions we make and when we make them differs from
+  a method to another. The cost-benefit trade off of these approaches 
+  would determine which approach to take.
 
 Questions/topics for discussion:
+- Could we discuss the relation between stepwise refinement and module 
+  specification with nonclassical and classical logic. 
+- They mention that:
+  "If the root of the tree represnts the situation before any decisions are 
+  made, then two programs, which have only the root as common ancestor, have 
+  nothing in common." Then why are they even considered in a same program 
+  family? Shouldn't we have some constraints while constructing such trees?
+- Is it right to consider the implementation of operators in the stepwise 
+  refinement approach as abstractions?
+  
 
 Discussion notes:
 Summary:
