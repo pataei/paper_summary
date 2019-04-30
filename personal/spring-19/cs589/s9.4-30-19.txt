@@ -106,6 +106,7 @@ Take home(s):
   closed-world assumption, inductive reasoning, etc)
 - Classical modularity (which focuses on the notion of information hiding) 
   corresponds to classical logic. 
+- This mismatch could be detrimental to software desing!
 
 Questions/topics for discussion:
 - I didn't grasp actual denotation. What is exactly? (right before S2.3)
