@@ -2,10 +2,55 @@ The road to feature modularity?
 C. Kastner, S Apel, and K. Ostermann
 
 Summary:
-
+They discuss two point of views towards modularity:
+1) notion of information hiding coming from PL community
+2) notion of locality and cohesion coming from the SE community
+especially in the context of feature modularity and 
+feature-oriented programming.
 
 Notes:
-
-
+- we want to modularize feature representations to make features
+  explicit in design and impl, to reason about their impl locally,
+  and to compose them flexibly.
+- open-world view = not all features are necessarily known. 
+- closed-world view = we gloablly reason about a closed set of 
+  feature impl.
+- two ways to represent features:
+  1) syntactically (structurally): when added to a prog, a feature 
+     manifests in additions or modifications of development 
+     artifacts.
+  2) semantic units that interact and give rise to the observable
+     behavior a user is interested in.
+  they both encourage abstraction but emphasize different properties.
+  here they take side with structural perspective, as it's older.
+* locality and cohesion:
+  - core idea of feature-oriented prog: use features as an additional
+    dimension of decomposing programs. 
+  - feature modules: the individual parts when decomposing a prog
+    into features.
+  - a feature module is regarded as a unit of composition.
+  - idea of locality and cohesion: place everything related to a feature
+    into a separate structure which is then called faeture module.
+  - the notion of cohesion is pervasive in large parts of the 
+    aspect-oriented programming community and the SE community.
+  - helps developers focus their attention when maintaining code.
+* info hiding:
+  - goal: distinguish bw the internal and external part of a module.
+  - external part = interface: describes a contract with the rest of 
+    the world --> the contract enforces the desired abstraction and 
+    corresponding inveriants
+  - modular reasoning: we can understand a module in isolation wo 
+    looking at internals of other modules.
+  - while cohesion may support some degree of local reasoning, wo 
+    interfaces there are no hidden parts and we need global 
+    whole-prog analysis still.
+  - another goal of modular sys: enable modular type checking and
+    support separate compilation.
+  - enforcing interfaces encourages open-world view 
+  - other adv: black-box reuse, indep multiperson dev, modular testing
+  - the prblm: in feature-oriented prog, the info hiding notion of 
+    modularity seems underrepresented.
+* challenges:
+  - 
 Comments:
 
