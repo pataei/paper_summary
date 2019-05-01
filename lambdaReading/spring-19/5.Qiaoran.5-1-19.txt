@@ -24,4 +24,5 @@ In-meeting comments:
   - CPO: complete partial order! look into it! 
   - changing the strictness of a function matters when you throw it an 
     infinite data structure
-  - 
+  - Knuth–Bendix completion algorithm discusses how to apply optimization
+    rules in such a way that you don't get stuck in an infinite loop
