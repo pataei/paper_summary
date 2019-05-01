@@ -1,0 +1,27 @@
+Ch17, Program Transformation and the Operational Approach,
+Functional Programming
+
+Summary:
+-
+
+Notes:
+-
+
+Comments:
+- it was an interesting, I'd like to read the next chapter!
+
+In-meeting comments:
+- Ameya: transformation is a mapping!! is it tho here?
+
+- Marting: 
+  - non-termination is one way to get bottom but it's not bottom itself
+  - den sem: map AST to sets
+  - provig meaning-preserving transformation can be done in both op sem and
+    den sem. while in den sem you may need to deal with CPOs if you have
+    an operation for introducing functions and you have recursion. but you 
+    don't need to do this in op sem. thesedays you don't see ppl using 
+    den sem that much. but both approaches have inductive proofs. 
+  - CPO: complete partial order! look into it! 
+  - changing the strictness of a function matters when you throw it an 
+    infinite data structure
+  - 
