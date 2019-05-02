@@ -1,0 +1,19 @@
+The Expression Problem, Philip Wadler
+
+Summary:
+The expression problem is the ability of the language to express
+two kinds of extensions: 1) extending the data type and 2) extending
+operations on some data type. The problem is doing these extensions
+in a modular manner without changing the source code. The proposed
+solution defines multiple mutually recursive inner classes and
+interfaces. In Haskell we can simply use adapter patterns as a 
+workaround.
+
+Take home(s):
+The expression problem highlights the tension in language desing.
+
+Questions/topics for discussion:
+- I didn't really understand Wadler's proposal and the trick he's using. (S1)
+- What is GJ?
+- I didn't understand how one can relax the GJ or Java constraints! (S2)
+- waht are fixpoints? (S3)
