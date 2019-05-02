@@ -51,6 +51,41 @@ Notes:
   - the prblm: in feature-oriented prog, the info hiding notion of 
     modularity seems underrepresented.
 * challenges:
-  - 
+  - modularity cost: development and maintenance effort. we need to 
+    invest effort into design and deciding what to hide and expose.
+    changing the interface later on is nonmodular bc it affects other
+    modules too. modularity is benefitial if the expected benefits 
+    outweigh the additional costs.
+  - features crosscut dimensions of modularization. the impl of a 
+    feature may scatter over classes and methods and impls of multi
+    features may be tangled in the same underlying module.
+  - features usually impl fine-grained extensions. this is bad dsgn
+    but gives developers flexibility.
+  - we could use coarse-grained interface to hide internals of 
+    fine-grained impl. but this introduces overproportional overhead.
+    when a feature makes fine-grained changes in many positions, we
+    need to expose extension points at ll positions, resulting in a
+    large interface that is hard to understand. this results in an
+    expensive pointless info hiding since we're exposing all internals
+    anyway.
+  - tension bw expressiveness and modualrity. the more restrict on 
+    feature extension, the more modular system.
+  - features interact with each other, intensionally or accidentaly.
+  - micromodularization: a module for each feature and its interactions,
+    costs: 1) increased development effort 2) remains little to hide and
+    little to reason about modularly. it's technical necessity but not
+    desired. prblm: we cannot simply partition code hierarchically into
+    features since they interact. module relationships form a directed
+    acyclic graph.
+  - all interactions are specified in interfaces and there should be no
+    chance for accidental interactions. 
+  - feature model: describes a set of features and their relationships
+* Open world:
+  - feature impl is tied to the base code or other features of the product
+    line
+  - in a closed-world product line setting, the benefits of feature 
+    modularity appear less urgent.
+  - open-world scenarios is where it all pays off.
+  
 Comments:
 
