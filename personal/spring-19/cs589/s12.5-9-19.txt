@@ -2,7 +2,46 @@ Software Extension and Integration with Type Classes,
 R. Lammel, K. Ostermann
 
 Notes:
-
+- software extension: the act of extending a software module wo 
+  modifying it
+- software integration: the act of integrating a software module 
+  into an existing software sys
+- type classes provide a powerful modularity mechanism that can be 
+  used to address several of extension and integration problems
+- type class: defines a signature for a family of functions that 
+  every member of the type lass must implement
+- a type becomes a member of a type class by an instance declaration
+  that implements the functions declared in the type class
+- the instance selection of an instance for func of a type class
+  happens at commpile time, if arg and result types are sufficiently 
+  instantiated; it may be deferred to runtime otherwise
+- adapter problem: the problem of adapting an obj type so that it 
+  implements the interface that is required by a given client
+- tyranny of the dominant decomposition: the OO programming limitation 
+  that one has to choose a fixed decomposition of a system in the 
+  design of a class hierarchy, although other decompositions are 
+  appropriate  
+- the use of type constraint in class definitions is similar to OO
+  interface inheritance
+- expression prblm: the prblm of achieving extensibility of both the 
+  dimensions data and operations
+- the introduction of new data variants isn't admitted by the basic 
+  notion of closed algebraic datatype.
+- constructor class: type classes whose prarmters are supposed to be 
+  type constructors
+- retroactive interface implementation: separation into three 
+  independent parts corresponds to it --> type classes enable 
+  fine-grained modularty bc an inst can be declared 
+  separately from both the class declaratoin and the type wich is made 
+  an inst of the class
+- single-par type classes enable the formation of sets of types w 
+  common methods, while multi-par type classes enable the formation 
+  of relations on types, again with common methods. Each inst injects 
+  a new relationship bw specific types into the relation.
+- type classes provide a convenient way of sharing impls among insts.
+- type-class declarations are reminiscent of abstract classes in 
+  mainstream OO langs.
+- existential types can make the actual type opaque.
 
 --------------------------------------------------------------
 In-calss assignment:
