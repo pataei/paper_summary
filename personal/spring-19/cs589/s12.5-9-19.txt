@@ -9,10 +9,31 @@ In-calss assignment:
 
 Summary notes:
 Summary:
+The paper discusses the use of type classes to overcome some of the
+problems posed by software extension and inetgration in a modular
+manner. Thoughtful implementation of single parameter type classes
+provide a solution to problems such as the adapter problem, the 
+tyranny of the dominant decomposition, and the expression problem.
+While the multi-parameter type classes can address multi dispatching,
+family polymorphism, and framework integration. Although, doing so
+introduces some new strengths and weaknesses compared to current SE
+approaches.
 
 Take home(s):
+- Type classes can be used as a mechanism to solve some of the 
+  software extension and integration problems by lifting the concern
+  from the value level to the type level.
+- It's good practice for researchers to think and expose themselves
+  to problems of other fields and try to solve within the techniques
+  of their own field. Who knows what one could come up with!
 
 Questions/topics for discussion:
+- Their solution to the expression problem doesn't seem modular to me
+  in terms of cohesion! Thoughts?
+- Could we discuss disadvantages of using type classes to solve the
+  expression problem?
+- I didn't grasp the concept of multi dispatching!
+- What is associated types?
 
 Discussion notes:
 Summary:
