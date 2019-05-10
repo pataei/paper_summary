@@ -8,17 +8,31 @@ Summary:
 Points to get out of the paper:
 
 - What is the paper about?
+  Building GUIs with FP.
 
 - What problem does it address?
+  1) unnecessary recomputation and 2) global delays while building 
+  GUIs with functional reactive programming.
 
 - How does the paper approach/solve the problem? 
   i.e. which FP techniques are applied?
+  using asynch funcitonal reactive programming. i.e., combining a 
+  simply-typed FP with a small set of reactive primitives.
 
 - What is the scope of the method/solution?
+  introducing a core lang FElm, translating Elm to the core lang.
+  then translating FElm to an intermediate lang that executes the
+  functional part and produces signals. then finally evaluate the 
+  signals.
 
 - What are the limitations?
+  I can't remember but they mentioned a couple of things and said
+  that they're not that much of a big deal!
 
 
 Questions/comments:
-
+- Why is it that discrete signals generalize continuous ones?
+- Is FElm statically typed or dynamically?!
+- Thanks for picking this paper, it gave me a couple of ideas for 
+  my research :)
 
