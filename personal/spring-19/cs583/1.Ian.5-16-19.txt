@@ -43,3 +43,7 @@ Questions/comments:
   (eliminators) for images. Could you identify some of the constructors and 
   eliminators? E.g.: when I have type Pair the constructor is: (,) while the
   eliminators are the `fst` and `snd` functions.
+- What are the limitations of their approach to address building images in 
+  FP languages?
+  
+  
