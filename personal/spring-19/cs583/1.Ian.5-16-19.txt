@@ -8,16 +8,38 @@ Summary:
 Points to get out of the paper:
 
 - What is the paper about?
+  Dividing images to models and representation and separating these two
+  concerns. The paper discusses the modeling part based on geometry 
+  models. It combines the beauty of images with FP to introduce a DSL
+  for drawing images and combining them.
 
 - What problem does it address?
+  Impling image based apps is usually done in imperative languages. Yet
+  FP provides us with variety of tools to do the same.
 
 - How does the paper approach/solve the problem? 
   i.e. which FP techniques are applied?
+  Taking advantage of HOF.
 
 - What is the scope of the method/solution?
+  The model of images and combining them.
 
 - What are the limitations?
+  idk
 
 
 Questions/comments:
-
+- The examples that they give (like `vstrip` and `checker`) are the model of
+  the image and not the representation, right? So when they say Figure x
+  shows function y, what they really mean is that they pass the result of 
+  function y to a draw function? Is my understanding correct?
+- I know this is detailed question but I couldn't figure it out.In the 
+  `polarChecker` function, what is role of `sc`?
+- It'd be cool if you implement and demonstrate some of the exercises they have.
+- I wanted to match the types of some of the functions that are using a lifting 
+  function but didn't have time to do so. Could you please how the types match
+  for say the `over` function?
+- This is a DSEL. So it introduces both constructors and destructors 
+  (eliminators) for images. Could you identify some of the constructors and 
+  eliminators? E.g.: when I have type Pair the constructor is: (,) while the
+  eliminators are the `fst` and `snd` functions.
