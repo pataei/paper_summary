@@ -1,1 +1,25 @@
+Finally Tagless, Partially Evaluated
+Tagless Staged Interpreters for Simpler Typed Languages,
+J. Carette, O. Kiselyov, and C. Shan
+
+Sections: 1-2
+
+Summary:
+
+Points to get out of the paper:
+
+- What is the paper about?
+
+- What problem does it address?
+
+- How does the paper approach/solve the problem? 
+  i.e. which FP techniques are applied?
+
+- What is the scope of the method/solution?
+
+- What are the limitations?
+
+
+Questions/comments:
+
 
