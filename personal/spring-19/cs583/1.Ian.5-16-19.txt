@@ -1,1 +1,23 @@
+The fun of Programming, 
+J. Gibbons and O. de Moor
+
+Sections: 7.1-7.5 and 7.7-7.8
+
+Summary:
+
+Points to get out of the paper:
+
+- What is the paper about?
+
+- What problem does it address?
+
+- How does the paper approach/solve the problem? 
+  i.e. which FP techniques are applied?
+
+- What is the scope of the method/solution?
+
+- What are the limitations?
+
+
+Questions/comments:
 
