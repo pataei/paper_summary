@@ -4,22 +4,60 @@ S. P. Jones and P. Wadler
 Sections: 1-2 and 5-6
 
 Summary:
+Great explanation on IO monad! Take notes while presentation
+is happening!
 
 Points to get out of the paper:
 
 - What is the paper about?
-
+  performing IO in a lazy pure functional lang and in-place
+  array updates. 
+  
 - What problem does it address?
+  doing IO in pure functional lang since it introduces side
+  effects.
 
 - How does the paper approach/solve the problem? 
   i.e. which FP techniques are applied?
+  monads! they compare against continuations too.
 
 - What is the scope of the method/solution?
+  IO, side effect, in-place array update
 
 - What are the limitations?
-
+  * Arbitrary interleaving of IO operation on the trunk and branch 
+    cannot affect the result. this cannot be guaranteed by the compiler 
+    and it si a proof obligation for the proger.
+  * Asynchronous IO allows potentially side-effecting operations to take 
+    place which aren't attached to the main trunk. This poses a proof 
+    obligation that any such side effects do not affect the behaviour of 
+    the rest of the program.
 
 Questions/comments:
-
+- What are unboxed data types?
+- I'm confused about `ccall` operation. Can I write functions using
+  this operation or is it just used when the Haskell IO code is 
+  translated to C code? (My understanding is that it's the former!)
+- I'm not sure I grasp their explanation on `delayIO`. For example,
+  what does it mean to say: "combinators of delayIO fork off a new 
+  branch from the main trunk"?
+- Why is it that the monadic array is guaranteed safe to implement 
+  update by overwriting, as compared to their first implementation 
+  of arrays?
+- Since we didn't read section 5, I'm lost about what continuation
+  approaches are. Some explanation would really help. Additionally, 
+  the authors state that the monadic array is more powerful than the
+  continuation one sine it's not possible to implement the former
+  in terms of the latter. However, they provide such an implementation.
+  The only problem is that they need to pass around an extra
+  annoying type variable. But to me this doesn't seem like that one
+  approach is weaker than the other. Doesn't this show they have
+  different levels of expressiveness (or maybe flexibility)? 
+  Furthermore, the authors mention that "this is only because of 
+  types, which they're not sure if it's an artifact of the 
+  Hindley-Milner type system or they types are revealing a difference 
+  of fundamental importance." I'm not sure if I even understand what
+  they mean by the latter but I'm interested to hear other's thoughts.
+  
 
 
