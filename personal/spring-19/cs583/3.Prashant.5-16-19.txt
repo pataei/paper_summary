@@ -9,11 +9,23 @@ Summary:
 Points to get out of the paper:
 
 - What is the paper about?
+  the cost of encoding an obj lang in a metalang without using the
+  features of the metalang properly.
 
 - What problem does it address?
+  the tagless (staged) type-preserving interpretation:
+  the overhead f running object progs via the metalang instead of 
+  implementing the obje lang directly in the machine running the 
+  metalang which are: 1) dispatching on the syntax of object terms
+  which can be avoided if the metalang provides code generation and 
+  2) tagging the types of object values.
 
 - How does the paper approach/solve the problem? 
   i.e. which FP techniques are applied?
+  They represent obj progs using ordinary functions rather than data
+  constructors. So they rep obj terms not by its abstract syntax but 
+  by its denotation in a semantic algebra (called final ecoding).
+  
 
 - What is the scope of the method/solution?
 
@@ -21,5 +33,14 @@ Points to get out of the paper:
 
 
 Questions/comments:
-
+ - What is a good definition of open and closed terms?
+ - What are continuation-passing styles?
+ - Isn't their approach basically shallow embedding of DSLs? Or did
+   the shallow embedding originate from the final encoding?
+ - What are exotic terms?!?
+ - Could we work through the type of the example they provide
+   in section 2.1 (app (lam (\x -> x)) (bool True))? It seems to 
+   me that they're evaluating it first and then producing its type
+   (which doesn't make sense). Shouldn't it have type (a->a)->Bool->Bool
+   instead of just Bool?
 
