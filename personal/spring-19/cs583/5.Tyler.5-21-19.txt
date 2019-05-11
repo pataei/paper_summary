@@ -8,18 +8,32 @@ Summary:
 Points to get out of the paper:
 
 - What is the paper about?
+  Concurrent scripting in Haskell.
 
 - What problem does it address?
+  Concurrent programming in Haskell.
 
 - How does the paper approach/solve the problem? 
   i.e. which FP techniques are applied?
+  introduces an EDSL for concurrency programming in Haskell.
 
 - What is the scope of the method/solution?
+  concurrency!
 
 - What are the limitations?
+  idk
 
 
 Questions/comments:
+- First off, thanks for picking this paper. It was quite enjoyable
+  reading it and seeing my progress in understanding more complicated
+  Haskell code. I specifically enjoyed their laws and their discussion
+  on why they needed to do this and what was the result of using it in
+  their VMs in Galois. I didn't have enough time to go through the 
+  `auction` example thoroughly so I'd like to get a chance to go 
+  through it maybe when you present the paper.
+- Just to check my understanding, the `notBefore` function waits `w`
+  time to return the result of `p`, right?
 
 
 
