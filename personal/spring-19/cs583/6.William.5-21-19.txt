@@ -8,18 +8,44 @@ Summary:
 Points to get out of the paper:
 
 - What is the paper about?
-
+  Representing inductive graphs in FP and their corresponding alg
+  in a simple and elegant FP manner.
+  
 - What problem does it address?
+  most impl of graph data structures proposed for FP still has some
+  taste of imparative paradigm in it by passing around the marks of
+  visited nodes.
 
 - How does the paper approach/solve the problem? 
   i.e. which FP techniques are applied?
+  Providing an inductive abstract type for graphs. they introducces
+  active patterns.
 
 - What is the scope of the method/solution?
+  data strucutes and algorithm in FP and CS education.
 
 - What are the limitations?
+  idk
 
 
 Questions/comments:
+- I'm just curious as what are uniqueness types? (don't feel obligated to answer
+  this since it's not that related to the paper)
+- The active patterns seem like a great syntactic sugar to write cleaner
+  Haskell code. How come it hasn't corporated in Haskell? Martin, do 
+  you know of any specific reasons?
+- Could you please discuss the difference between abstract types and algebric types?
+  Which one corresponds to abstract data types?
+- How is it that `&` isn't a data constructor and it's a function? I'm confused
+  about this!
+- It'd be great if you have comparison between functional and imperative paradigms
+  while writing laws over graphs? Such as gmap fusion.
+- Could you give an illustration on how grev is behaving? My understanding is that
+  it reverses the direction of edges, is that right?
+- Could you please discuss the adjustments needed to be applied to the dfs function
+  to get a traversal function for bfs briefly?
+- Martin, out of curosity, do you use a similar inductive data type for variational
+  graphs? (I've been meaning to read that paper of yours but haven't had the time!)
 
 
 
