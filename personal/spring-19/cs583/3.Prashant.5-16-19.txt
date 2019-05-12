@@ -35,8 +35,7 @@ Points to get out of the paper:
 Questions/comments:
  - What is a good definition of open and closed terms?
  - What are continuation-passing styles?
- - Isn't their approach basically shallow embedding of DSLs? Or did
-   the shallow embedding originate from the final encoding?
+ - How would you compare their approach to shallow embedding?
  - What are exotic terms?!?
  - Could we work through the type of the example they provide
    in section 2.1 (app (lam (\x -> x)) (bool True))? It seems to 
