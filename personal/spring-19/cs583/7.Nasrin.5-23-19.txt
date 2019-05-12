@@ -8,18 +8,37 @@ Summary:
 Points to get out of the paper:
 
 - What is the paper about?
+  multi-par type classes
 
 - What problem does it address?
+  the inaccuracies and ambiguities of multi-par type classes
 
 - How does the paper approach/solve the problem? 
   i.e. which FP techniques are applied?
+  introducing functional dependencies orignated from relational dbs
 
 - What is the scope of the method/solution?
+  functional languages, type system, functional dep from rel dbs.
 
 - What are the limitations?
+  idk
 
 
 Questions/comments:
-
+(I'm using --> to show the squrly arrow they're using in the paper.)
+- How does a type `a` determines type `b` in `a --> b`? It's easy to see
+  this for some examples but not so obvious for others. For example, for 
+  some specific type of `a`, `b`, and `c` how would we determine that
+  the functional dependency `(a,b) --> c` holds for instances of the Add 
+  and Mul type classes they provide in the paper? Also, do we need to 
+  specify how this determination hold in an instance of a multi-par
+  type class with functional dependency?
+- How does type inference happen in when we introduce functional 
+  dependencies?
+- Is it right to say that the FiniteMap type class introduces a more
+  flexible, accurate, and unambiguious way to introduce maps? If so, why
+  and how?
+- If we have the two functional dependencies: `a --> b` and 'b --> a` 
+  wouldn't this mean that the two types `a` and `b` are equivalent?
 
 
