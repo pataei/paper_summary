@@ -15,7 +15,7 @@ Points to get out of the paper:
 
 - How does the paper approach/solve the problem? 
   i.e. which FP techniques are applied?
-  introduces an EDSL for concurrency programming in Haskell.
+  monads, definitional laziness, higher-orderness, and concurrency.
 
 - What is the scope of the method/solution?
   concurrency!
@@ -34,6 +34,20 @@ Questions/comments:
   through it maybe when you present the paper.
 - Just to check my understanding, the `notBefore` function waits `w`
   time to return the result of `p`, right?
-
+- Do you think it's easier to implement a concurrency DSL in a lazy 
+  functional language that doesn't concer the programmer of the order of
+  evaluation or in an imperative paradigm that the programmer can control
+  the order of evaluation? In that respect, do the authors take advantage 
+  of Haskell lazy evaluation in their DSL? If so, where and how?
+- Is there any specific combinator that purposfully opts not to
+  use Haskell lazy evaluation (i.e. forces strict evaluation)?
+- They mention that the commutativeness of the parallel combinator holds in
+  Orc, which is a property that most MonadPluss instances violate. My 
+  question is how important are the properties of constructor classes? 
+  Aren't the properties an indicator of how member of such a class should
+  behave and if they're violated we should think twice about whether our
+  type constructor is actually an instance of such a constructor class or
+  not? Then how should we decide when it's ok that an instance doesn't
+  follow some of the laws of its constructor class?
 
 
