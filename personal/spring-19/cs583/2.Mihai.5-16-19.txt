@@ -31,7 +31,8 @@ Points to get out of the paper:
 
 
 Questions/comments:
-- Why is it that discrete signals generalize continuous ones?
+- Why is it that discrete signals generalize continuous ones? It seems
+  the other way around to me!
 - Is FElm statically typed or dynamically?!
 - Thanks for picking this paper, it gave me a couple of ideas for 
   my research :)
