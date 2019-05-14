@@ -2,7 +2,40 @@ Modular Object-Oriented Programming with Units and Mixins,
 R. B. Findler and M Flatt
 
 Notes:
-
+- a module delineates boundaries for separate developments.
+- a class permits fine-grained reuse via selective inheritance and
+  overriding.
+- units: like Java packages except that units are linked through an 
+  external linking specification instead of through a fixed internal
+  specification.
+- mixins: like java classes except that a mixin is parameterized over 
+  its superclass, so it can be applied multiple times to create different
+  derived classes from different base classes.
+- specify connections bw modules or classes separately from their defs.
+- a programmer can exploit the encapsulation and linking properties of
+  units to control the application of mixin extensions.
+- better reuse through defining basic definitions, the extensions, and 
+  the client in separate modules. 
+- each unit encapsulates its definitions and expressions wo evaluating 
+  them unitl the unit is invoked.
+- the units must first be linked together to form a prog.
+- a module sys serves two key purposes:
+  * separate development: a module encapsulates a set of definitions,
+    clearly delineating the interface bw the module and the rest of the 
+    prog. Each module can be developed in isolation and distributed to 
+    clients in a ocmpiled form.
+  * linking: modules are linked together to form a prog. linking connects
+    the definitions in one module with those in another, but a module 
+    cannot interfere with the internal structure of any other module.
+- a class sys supports:
+  * extensible types: an interface defines an extensible type, and a class
+    implements such a type.
+  * selective reuse: a class can selectively refine the iimpl of its superclass
+    preserving some inherited defs and overriding others with its own defs.
+  * instantiation: a class is instantiated to create an obj, a first-class value
+    that encapsulates the methods and instance variables of the class.
+- separate a modules's linking specification from its encapsualted definitions.
+- separate a class's superclass specification from its extending defs.
 
 --------------------------------------------------------------
 In-calss assignment:
@@ -45,7 +78,9 @@ in both dimensions by introducing units (similar to Java packages except
 that they're linked externally) and mixins (similar to Java classes 
 except that they're parametrized over their superclass and can be applied
 multiple times) and separating the definitions of these components from 
-their linking. 
+their linking. This structure allows the programmer to use the 
+encapsulation and linking of units to accordingly bundle up mixin 
+extensions when needed.
 
 Take home(s):
 - Defining signatures separately from implementation gives us a better
