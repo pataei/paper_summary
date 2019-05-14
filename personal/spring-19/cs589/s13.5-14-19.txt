@@ -1,0 +1,47 @@
+Modular Object-Oriented Programming with Units and Mixins,
+R. B. Findler and M Flatt
+
+Notes:
+
+
+--------------------------------------------------------------
+In-calss assignment:
+
+Summary notes:
+Summary:
+The paper discusses the interaction between modules (units) and 
+classes (mixins) and how one can improve software reuse by considering
+this interaction as well as separating this connection from their
+definitions. They achieve this by first defining units and mixins with
+explicit imports and exports (without compiling the code) and then 
+linking them in the final program. In order to solve the extensibility
+problem they keep all old original code and add new variants with 
+extensions to it.
+
+Take home(s):
+- Modules and classes offer different advantages for code reuse and 
+  considering both helps improve code reuse immensly which relies 
+  heavily on separating the definition of them from their connections.
+
+Questions/topics for discussion:
+- What is a formal definition of a client? To me it seems that they 
+  consider a piece of code client of another piece of code if it refers
+  to it. Is that right?
+- To me it seems that they keep the original code and just repeat it 
+  according to the extensions made and call it the solution to the
+  extensibility problem. Isn't this just having repeatitive similar
+  code all over the place? Although, in their approach this repeteation 
+  is only done for linking programs, which is probably much less 
+  repeteation compared to other approaches.
+- So they're approach works only for dynamically typed languages?
+- How would one put the following lesson in terms of Haskell: "Separate a 
+  module's linking specification from its encapsulated definitions."
+
+
+Discussion notes:
+Summary:
+
+
+Take home(s):
+  
+Discussion highlights:
