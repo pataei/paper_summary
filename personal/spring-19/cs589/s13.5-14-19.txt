@@ -40,8 +40,28 @@ Questions/topics for discussion:
 
 Discussion notes:
 Summary:
-
+The paper proposes a language with built-in support for extensibility
+in both dimensions by introducing units (similar to Java packages except
+that they're linked externally) and mixins (similar to Java classes 
+except that they're parametrized over their superclass and can be applied
+multiple times) and separating the definitions of these components from 
+their linking. 
 
 Take home(s):
+- Defining signatures separately from implementation gives us a better
+  upportunity for extensibility, no matter what language we're using.
   
 Discussion highlights:
+- While the extensibility is built into their language (MzScheme), other
+  languages like Java provide us the tools to allow for such extensibility
+  however we need to apply some techniques like the visitor pattern in 
+  order to achieve it.
+- We can think of Haskell module system as a conventional module system and
+  Java's classes (without interfaces) as conventional classes.
+- By loosening the restrictions of conventional classes and modules we can
+  solve the extensibility problem rather elegantly.
+- Mixins are similar to ML functors.
+- We can think of both lessons they're talking about in terms of Haskell's 
+  type classes.
+- If we add type signatures to units it could also work for statically typed
+  languages.
