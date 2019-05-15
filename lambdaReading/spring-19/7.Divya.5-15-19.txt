@@ -2,12 +2,56 @@ Algorithmic Debugging for Lazy Functional Languages,
 @http://www.cs.nott.ac.uk/~psznhn/Publications/jfp1994.pdf
 
 Summary:
-
+They use algorithmic debugging to concentrate on the declarative 
+aspects of program semantics since in lazy functional lang, the 
+arguments to functions are in general partially evaluated 
+expressions. They address this by providing the user with a 
+strictified view of the execution trace whenever possible. 
 
 Notes:
-
+- algorithmic debugging has two phases: 1) execution trace tree is 
+  built at the procedure/function level during the first phase. 
+  2) traversing this tree in a top-down manner, asking, for each 
+  encountered node, whether the recorded procedure or func invocation
+  is correct or not. 
+- alg debugging focuses on the declrative semantices of an application
+  prog rather than its operational aspects such as evaluation order.
+- if two bugs conspire to hide each other, it will not be possible
+  algoritmically to debug the prog.
+- strictification: concerned with hiding the lazy evaluation order, 
+  thus giving the user an as strict impression of lazy execution as 
+  possible.
+- lazy eval permits the proger to largely forget about evaluaiton order,
+  so there is a strong case for not bothering him with it during 
+  debugging.
+- problem at hand: debugging of lazy functional progs is made difficult 
+  by delayed evaluation, counter-intuitive evaluation order and 
+  partially evaluated expressions.
+- algorithmic debugging is based on the notion of an externally 
+  visible bug symptom: an execution of a prog didn't produce the 
+  expected result.
+- side-effect-free procedures: the computation depends only on its 
+  input parameters, and there is no effects of the computation 
+  besides what is indicated by the output parameters.
+- it's possible to achieve side-effect-freeness in progs written in 
+  imperative languages by prog transformations.
+- 
+  
 
 Comments:
+- As developer do you use debuggers? If so how annoying are they?
+  esp if you have to keep answering questions.
+- The fact that they keep asking questions for every single input
+  is really annoying. Couldn't they generalize or formulate the 
+  behavior of a function and check with the user if this behavior 
+  is correct or not? ie give the function, its behavior that the 
+  developer expects and give back where the function is behaving 
+  differently instead of asking if the answer is correct for every
+  single input.
+- just checking: strict semantics: semantics that they use to get 
+  strict evaluation?
+- purely declarative? or declarative semantics?
+- what is their def of perfect strictification?
 
 
 In-meeting comments:
