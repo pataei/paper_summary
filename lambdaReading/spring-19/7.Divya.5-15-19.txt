@@ -49,11 +49,20 @@ Comments:
   differently instead of asking if the answer is correct for every
   single input.
 - just checking: strict semantics: semantics that they use to get 
-  strict evaluation?
+  strict evaluation? yes, it corresponds to call-by-value. 
+  non-strict: call-by-need. but
+  strictly speaking there's a difference between strict eval and 
+  call-by-value. functions are strict: if they're given undefined
+  they return undefined. now using a parameter passing schema you
+  can realize (capture) the strictness of functions.
+  three concepts:
+  1) parameter passing: call-by-value
+  2) reduction strategy: applicative order
+  3) strictness of functions
 - purely declarative? or declarative semantics?
 - what is their def of perfect strictification?
 
 
 In-meeting comments:
-
+- it was an enjoyable meeting!
 
