@@ -8,18 +8,36 @@ Summary:
 Points to get out of the paper:
 
 - What is the paper about?
+  explaining functional progs
 
 - What problem does it address?
+  how do parts of a higher-order functional prog have been computed
 
 - How does the paper approach/solve the problem? 
   i.e. which FP techniques are applied?
+  by trace slicing and unevaluation prog
 
 - What is the scope of the method/solution?
+  prog explanation and debugging
 
 - What are the limitations?
+  idk
 
 
 Questions/comments:
-
-
-
+- Why is it that understanding and explaining computations and their 
+  results ofen runs agains the desire to treat a computation as a 
+  black box that maps intputs to outputs? If the explanation is given 
+  in a high-level language or like a story in natural language that 
+  wouldn't be the case. Wouldn't this depend more on the kind of 
+  explanation one chooses?
+- I'm confused about slicing criterion, it seems NOT FINISHED!!
+- What makes a slicing criterion more flexibile? Any formal 
+  definition?
+- When is a slicing forward and when is it backwards?
+- Why is it that they mention that slicing at the granularity of 
+  variables is too coarse-grained? It seems the other way to me!
+- How does strictness and laziness play a role in program slicing? I
+  know how they influence the program tracing but I'm not so sure 
+  about their effect on program slicing.
+- 
