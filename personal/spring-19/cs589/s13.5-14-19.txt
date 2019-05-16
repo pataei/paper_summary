@@ -92,7 +92,7 @@ Discussion highlights:
   however we need to apply some techniques like the visitor pattern in 
   order to achieve it.
 - We can think of Haskell module system as a conventional module system and
-  Java's classes (without interfaces) as conventional classes.
+  Java's classes without interfaces as conventional classes.
 - By loosening the restrictions of conventional classes and modules we can
   solve the extensibility problem rather elegantly.
 - Mixins are similar to ML functors.
