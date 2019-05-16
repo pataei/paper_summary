@@ -9,10 +9,38 @@ In-calss assignment:
 
 Summary notes:
 Summary:
+The paper introduces data types a la carte, an approach towards
+solving the extensibility (expression) problem  by using the 
+fix point operator to define data types in Haskell instead of 
+defining them by various cases. This provides us with enough 
+flexibility to extend both data types and operations over them
+although writing expression using these data types becomes rather
+impractical. However, the author solves this problem by introducing
+smart constructors, one of which is the injection which helps 
+reduce the complexity of wiritng expressions a lot (it really is a
+smart constructor!). Athough this may introduce some complexity at
+first and it might be hard to understand, it becomes easier to 
+follow as the paper continues (at least in my opinion). It also 
+scatters the data type definitions and operations all over and 
+loses modularity in terms of cohesion. Finally,
+the author uses data types a la carte to extend monads in a 
+modular manner. The huge gain here is that now it's clear what 
+kind of effects certain expression my have.
 
 Take home(s):
+- Making the data type definitions more general in Haskell instead of
+  relying on various cases and relying heavily on type classes and 
+  constructor classes to implement operations allows for extending 
+  both data types and operations over them in a modular manner (in 
+  terms of not changing the existing code). 
 
 Questions/topics for discussion:
+- The fact that I need to pass the signature of expressions in order
+  for the type checker to be able to infer types seems to be an 
+  annoying limitation. Thoughts?
+- How does one extend a monad? What does it even mean to extend a 
+  monad?
+- What do they mean by modular functions? Could someone give an example?
 
 
 Discussion notes:
