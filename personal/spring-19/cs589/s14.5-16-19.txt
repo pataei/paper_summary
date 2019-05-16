@@ -2,7 +2,7 @@ Data types a la carte,
 Wouter Swierstra
 
 Notes:
-
+look into the paper if you want to implement your progs in this fashion!
 
 --------------------------------------------------------------
 In-calss assignment:
