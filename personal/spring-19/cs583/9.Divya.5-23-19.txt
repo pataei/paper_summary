@@ -31,7 +31,6 @@ Questions/comments:
   in a high-level language or like a story in natural language that 
   wouldn't be the case. Wouldn't this depend more on the kind of 
   explanation one chooses?
-- I'm confused about slicing criterion, it seems NOT FINISHED!!
 - What makes a slicing criterion more flexibile? Any formal 
   definition?
 - When is a slicing forward and when is it backwards?
@@ -40,4 +39,16 @@ Questions/comments:
 - How does strictness and laziness play a role in program slicing? I
   know how they influence the program tracing but I'm not so sure 
   about their effect on program slicing.
-- 
+- What are the inputs to the slicer? Is it just a program containing
+  a function with its input? If we're always passing the input, this
+  means that the slicer won't work if I just give it a function. Do
+  you think this is a limitation for an explanation system?
+- Do you think it's possible to generate a high-level description of 
+  a program's behavior using differential trace slicing?
+- What's the difference between a context and an enviornment?
+- The introduction rules seem not produce any holes. So I'm wondering
+  how do hole are generated? Giving a derivation tree as an example 
+  could really help understanding thier rules in Fig. 7 easy.
+- Why is it that they use an arbitrary context extended with bingings
+  for `f` and `x` in the typing rule for application traces? Why is it
+  arbitrary?
