@@ -3,21 +3,155 @@ Practical extensibility with obejct algebras,
 B. C. d. S. Oliveira and W. R. Cook
 
 Notes:
+- obj alg is an abstraction closely related to algebraic datatypes 
+  and church encodings.
+- obj alg: a class that implements a generic abstract factory 
+  interface which corresponds to a particular kind of algebraic
+  signature.
+- factories and visitors are two faces of obj algebras.
+- requirements of solutions to the expression problem:
+  * extensibility in both dimensions
+  * strong static type safety: a solution must prevent applying an 
+    operation to a data variant which it cannot handle using static
+    checks
+  * no modification or duplication of existing code
+  * separate compilation and type-checking: safety checks or 
+    compilation steps must not be deferred until link or runtime.
+  * independent extensiblitiy: it should be possible to combine 
+    independently developed extensions so that they can be used 
+    jointly.
+- for adding new operations in OO langs we need to modify the 
+  interface which violates the no modification requirement. while
+  inheritance can be used to add new operations, the changes must
+  be made to the interface and all classes simultaneously to 
+  ensure static type safety. doing so is possible but requires 
+  advanced typing features.
+- internal visitor: a visitor that produces a value by processing 
+  the nodes of a composite structure, where the control flow is
+  controlled by the infrastructure rather than the visitor itself.
+- from a SE point of view, visitors localize code for operations 
+  in one place, while conventional OO designs scatter code for 
+  operations across multiple classes. visitors also provide a nice
+  way to have state that is local to an operation rather than to 
+  a class.
+- disadv of traditional visitors: 
+  1) they reverse the extensibility dimension
+  2) initial prep is required due to adding accept methods.
+- algebraic signature: defines the names and types of functions that
+  operate over one or more abstract types (called sorts).
+- constructors: return values of the abstract set
+- observations: return other kinds of values than the abstract set
+- constructive signature: an alg sig that only has constructors.
+- initial/free algebra: use a set that contains expressions, which 
+  are applications of functions in all legal ways according to the 
+  signature, and to define the functions simply as constructors.
+  f1: T_1 -> A
+  f2: T_2 -> A
+  ...
+  fn: T_n -> A
+  (A is the sort)
+  eg:
+  E = {lit(0), lit(1), ..., 
+       add(lit(0),lit(0)), add(lit(0), lit(1)), ...}
+  lit = \n.lit(n)
+  add = \(a,b).add(a, b)
+- f-algebra:
+  f: F(A) -> A
+  F(A) = T_1 + T_2 + ... + T_n
+  this transformation from initial alg to f-alg is based on the 
+  isomporphism (S+T) -> A equiv to (S->A)*(T->A)
+- church = forall A. (T_1 -> A) * ... * (T_n -> A) -> A
+- a church encoding works by taking an alg (sort and functions) as
+  input and using it to create an element of the sort. a church 
+  value isn't really a value but rather a recipe for creating a 
+  value. the recipes in church encoding are isomorphic to the free
+  algebra b/c of parametricity.
+- from FP viewpoint, church encodings represent data as folds.
+- alg sig can be defined in statically typed oo langs by creating
+  a generic interface whose parameter is the abstract type.
+- obj alg interface: an interface representing an alg sig
+- factory interface vs. obj alg. interface: factory interface uses
+  a specific concrete class or interface as the result type for the 
+  factory methods, while the obj alg interface has a generic type.
+- obj alg: a class that implments an obj alg interface. 
+- an obj alg plays the role of a factory for expressions.
+- the factory defines how to create each kind of objs in the 
+  composite structure.
+- OO encodings of type classes:
+  * interface == type class
+  * class == instance of the type class
+- obj alg provides a direct impl of functional internal visitors
+  since constructive algebraic signatures correspond exactly to 
+  internal visitor interfaces.
+- the expression families problem: when only subtyping relations
+  bw classes in the same family are preserved, i.e., the extended
+  terms and operations are incompatible with the base terms and ops.
+- an extension of an obj alg interface is a subtype of the original
+  interface.
+- an extended term type (that is, with more constructors) is a 
+  supertype of a base term type.
+- in solutions to the expression prbl using open classes, there is 
+  a single expression type which is incrementally extended. so once 
+  expressions are extended it becomes impossible to distinguish the 
+  extended expressions from basic expressions. so type distinctions
+  bw multiple variations of expressions are lost.
+- multi-sorted obj algebras are closely related to family 
+  polymorphism, which allow a variation expression prblm where 
+  multiple types evolve as a family.
+- abstr factory pattern is a creational pattern.
+- builder pattern vs abst factory pattern: builders tend to have 
+  complex obj construction processes. factories are typically 
+  stateless, while builders can maintain states.
+- it's easy to have indep extensibility if a lang supports traits
+  or mixin composition.
+- interface inheritance can be used to combine algebra interfaces.
+- algebra == class
+- algebra interface = interface
 
 --------------------------------------------------------------
 In-calss assignment:
 
 Summary notes:
 Summary:
+The paper proposes object algebras with its implementation in Java
+as a solution to the expression problem and they claim that compared
+to other solutions proposed to solve the expression problem their 
+approach not only satisfies all the requirements for solving the
+expression problem(extensibility in both dimensions, strong static
+type safety, no modificaiton or duplication, separate compilation and
+type checking, and independent extensibility) but it is also 
+comparably lightweight and doesn't
+require advanced langauge features or language extension or compilers 
+and isn't hard to comprehend or use by the programmer.
 
 Take home(s):
 
+
 Questions/topics for discussion:
+- Does the the mixins and units solution that we
+  read violate the separate compilation requirement for solutions to the 
+  exprssion problem?
+- Could we compare internal visitors against external ones?
+- The authors mentions:
+  "from a SE point of view, visitors localize code for operations 
+  in one place, while conventional OO designs scatter code for 
+  operations across multiple classes. visitors also provide a nice
+  way to have state that is local to an operation rather than to 
+  a class." This doesn't mean that when we scatter the code for
+  operations we lose extensibility over the operation dimension, right?
+  E.g.: extending operations in Haskell.
+- Does the initial/free algebra correspond to the initial encoding?
+- Can an object algebra implement Church encoding values?
+- Is a family the base implementation or one of its extension? Not sure 
+  if I'm clear on the definition of a family.
 
 
 Discussion notes:
 Summary:
 
+
 Take home(s):
-  
+
+
 Discussion highlights:
+
