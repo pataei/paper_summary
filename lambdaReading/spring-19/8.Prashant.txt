@@ -5,9 +5,14 @@ Summary:
 
 
 Notes:
-
+* too lazy/busy to take notes!
 
 Comments:
+- Did this catch on? Ie, is there a practical language that is total FP?
+  esp with existence of dep type langs.
+- totally agree that using the primitive recursion and limiting a lang to
+  just primitive recursion although painful at first is great for teaching
+  like Pie.
 
 
 In-meeting comments:
