@@ -120,12 +120,13 @@ approach not only satisfies all the requirements for solving the
 expression problem(extensibility in both dimensions, strong static
 type safety, no modificaiton or duplication, separate compilation and
 type checking, and independent extensibility) but it is also 
-comparably lightweight and doesn't
+lightweight and doesn't
 require advanced langauge features or language extension or compilers 
 and isn't hard to comprehend or use by the programmer.
 
 Take home(s):
-
+Object algebras are a lightweight solution to the expression problem in 
+object-oriented programming that could be implemented by abstract factories.
 
 Questions/topics for discussion:
 - Does the the mixins and units solution that we
