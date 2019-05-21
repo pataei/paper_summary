@@ -48,4 +48,7 @@ Questions/comments:
   graphs? (I've been meaning to read that paper of yours but haven't had the time!)
 
 
+In-class discussion:
+- monadic impl of graphs!!
+
 
