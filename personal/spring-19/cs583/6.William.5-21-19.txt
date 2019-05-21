@@ -50,5 +50,6 @@ Questions/comments:
 
 In-class discussion:
 - monadic impl of graphs!!
-
+- view patterns in haskell! 
+* check these out!
 
