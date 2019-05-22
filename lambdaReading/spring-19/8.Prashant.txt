@@ -16,4 +16,18 @@ Comments:
 
 
 In-meeting comments:
+- Eric: 
+  * I like that it makes the case for total functional prog outside of 
+    the context of dependently typed lang.
+  * nicely pointed out that if we have totality then strictness and
+    nonstrictness doesn't change the semantic. lazy eval then just 
+    becomes an optimization.
+  * Pierce gives codata much more space and explanation in software 
+    fundation.
+  * data and codata interact with each other.
 
+  
+- checkout: 
+  * brainfuck
+  * jsfuck
+  * robozzle
