@@ -1,0 +1,37 @@
+Typed Tagless Final Interpreters
+@http://okmij.org/ftp/tagless-final/course/lecture.pdf
+
+
+Summary:
+It provides examples of small languages with two different encodings:
+1) initial encoding 2) tagless-final encoding and compares the two in
+terms of compositional interpreters and extensibility.
+
+Notes:
+
+
+Comments:
+- I liked viewing data types = encoding
+  of a domain-specific lang, data type processing = interpretation of 
+  the lang. 
+- being exposed to different views of concepts forces my limits to 
+  understand them more deeply and view them appropriately in different
+  context!
+- why is it that storing object terms written in the final encoding
+  in a data structure or passing as arguments results in losing 
+  polymorphism? p 6
+- I really enjoyed their argument about compositionality is context 
+  insesitivity. and compositionality is modularity. p 13
+- Isn't the case that optimization is more efficient in initial encoding?
+  but does that mean that it's also easier? b/c in intital encoding
+  i lose compositionality and it becomes hard to show correctness and
+  termination which isn't the case in final encoding. So doesn't that
+  mean that optimization is easier in final encoding? also is it right
+  to say that optmization is extensible in tagless-final encoding but 
+  not initial? I can write each optimization rule as a function but 
+  if it doesn't terminate then??
+- what are the intermediate data types? p19
+- threaded code? p5
+- indexed programming? p1
+
+In-meeting comments:
