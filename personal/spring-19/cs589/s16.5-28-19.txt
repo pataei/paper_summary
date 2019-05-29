@@ -9,33 +9,21 @@ In-calss assignment:
 Summary notes:
 Summary:
 The authors purpose an extension to Java, called MultiJava, that adds
-open classes and multiple dispatch.  
+open classes and multiple dispatch. Open classes are a solution to the
+expression problem in OOP, i.e., one can extend operations modularly. And
+they don't have the disadvantages of the Visitor pattern, e.g., having
+to plan ahead. Multiple dispatch provides a solution to the binary method
+problem, i.e., the use of double-dispatching.
 
-Open classes allow programmers to add methods to existing classes without editing those classes, or even having their source code. Multiple dispatch allows the code invoked by a method call to depend on the run-time type of all the arguments, instead of just the receiver.
-In this article we have described the MultiJava programming language, motivated the design of the language, and discussed its modular, static typechecking, and modular compilation strategy. MultiJava adds the ability to dispatch on a class externally, that is without modifying the class in place. Among
-other things, this allows MultiJava to cleanly solve the binary and augmenting
-method problems. It does so, unlike other solutions, without requiring advance
-planning by the original implementor of a datatype. We think that MultiJava
-represents a sweet spot in the design space: it allows the concise, declarative
-expression of multimethod dispatch and augmenting methods; and its type system is simple and intuitive.
-We have also demonstrated how MultiJava’s conservative extension of Java
-has allowed our users to easily adopt the language while creating more readable
-and maintainable code. Sample code drawn from our user community illustrates
-the benefits afforded by multiple dispatch and open classes and provides at least
-anecdotal evidence arguing for the inclusion of these features in mainstream
-programming languages.
-MultiJava is a conservative extension of the Java programming language that adds symmetric
-multiple dispatch and open classes. Among other benefits, multiple dispatch provides a solution
-to the binary method problem. Open classes provide a solution to the extensibility problem of
-object-oriented programming languages, allowing the modular addition of both new types and
-new operations to an existing type hierarchy. 
 
 Take home(s):
 Open classes provide a solution to the expression problem for OO programming
 languages by allowing extension of new types and operations modularly.
 
 Questions/topics for discussion:
-
+- Open classes look like an interesting idea to solve expression problem. Is
+  there a counterpart in FP?
+- 
 
 Discussion notes:
 Summary:
