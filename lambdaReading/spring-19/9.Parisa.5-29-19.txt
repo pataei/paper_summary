@@ -35,3 +35,4 @@ Comments:
 - indexed programming? p1
 
 In-meeting comments:
+- wrote in paper!
