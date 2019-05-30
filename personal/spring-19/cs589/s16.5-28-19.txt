@@ -23,7 +23,7 @@ languages by allowing extension of new types and operations modularly.
 Questions/topics for discussion:
 - Open classes look like an interesting idea to solve expression problem. Is
   there a counterpart in FP?
-- 
+- How are they maintaining type safety while doing dynamic dispatching?
 
 Discussion notes:
 Summary:
