@@ -8,10 +8,35 @@ In-calss assignment:
 
 Summary notes:
 Summary:
+The authors propose a syntactically and semantically lightweight
+solution to the expression problem in Haskell: open data types and 
+open functions. As a result constructors of open data types and
+cases of the pattern match-based functions are scatterd all over the
+code. Although the order of constructors does not matter in their core
+language, it matters in Haskell due to automatice instance declarations
+of data types. This is determined by a 
+depth-first traversal of the module dependency graph.
+Additionally, the order of pattern matching is determined by the best-fit 
+approach where the most specific pattern is chosen when possbile.
+The authors also show case the use of open data types and functions
+in two domain: generic programming and extensible exceptions.
 
 Take home(s):
+Open data types and open functions allow one to extend a functional
+program in both dimensions (data and operation).
 
 Questions/topics for discussion:
+- Are mutually recursive modules, modules that import each other?
+  If so, wouldn't they cause cyclic dependency? And how does Haskell
+  handle them?
+- I like to discuss their argument about application of open data types
+  and open functions in generic programming. They're saying that generic
+  programming relies heavily on overloaded functions but I don't think 
+  this is the case at least for SYB.
+- Could we discuss the order ccmp? I'm wondering if there would be ambigius 
+  cases!
+- I like to discuss compilation at once more and how it results in more 
+  optimized programs. Is this even true?!
 
 
 Discussion notes:
@@ -20,3 +45,5 @@ Summary:
 Take home(s):
   
 Discussion highlights:
+- it's important to have open functions since here we don't have multiple
+  dispatch to accomodate open data types.
