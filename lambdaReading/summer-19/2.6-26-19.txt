@@ -6,7 +6,7 @@ Comments:
   without enough conceptual understanding of it, due to high demand in
   industry. thoughts? (p328)
 - "good programmers are born, not made". definitely not agree! thoughts?
-  (p330)
+  (p330) --> Divya mentioned it so don't repeat!
 - "programming is artistic (creative) and not scientific". strongly 
   disagree! it's creative but the science part makes it creative. 
   thoughts? (p330)
@@ -26,5 +26,4 @@ Comments:
   operation" --> wouldn't this be a good argument to advocate starting of
   CS students with a pure FP?
 
-In-meeting comments:
 
