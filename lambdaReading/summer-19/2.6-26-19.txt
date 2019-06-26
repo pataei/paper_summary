@@ -1,7 +1,30 @@
 Ch 12 up to 12.3.5 (excluding)
 
 Comments:
-
+- Is programming a uniquely intellectual activity? it seems to me that
+  it's more of a skill that people develop over time, sometimes even 
+  without enough conceptual understanding of it, due to high demand in
+  industry. thoughts? (p328)
+- "good programmers are born, not made". definitely not agree! thoughts?
+  (p330)
+- "programming is artistic (creative) and not scientific". strongly 
+  disagree! it's creative but the science part makes it creative. 
+  thoughts? (p330)
+- what a sterotipic claim: programmers are typically male and wihtdrawn from
+  scoiety! really annoyed by this part! the author is so obviously a man!!
+  (p330)
+- totally agree with their comment that CS1 is typically regarded 
+  difficult to student and can relate to it. (p330)
+- how are programs created opportunistically? (p334) (if time allows!)
+- it'd be insteresting to conduct studies of how different and novices 
+  understand specific fields of CS (p336)
+- hands down, an essential concept of CS is abstraction (p338)
+- can relate to the distinction between conceptual and practical 
+  knowledge, specifically with monads. (p339)
+- "different PL afford different features of a notional machine, that they
+  can be used to explain hidden actions and side effects of a program's 
+  operation" --> wouldn't this be a good argument to advocate starting of
+  CS students with a pure FP?
 
 In-meeting comments:
 
