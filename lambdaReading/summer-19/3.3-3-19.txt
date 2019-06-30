@@ -1,3 +1,18 @@
 Chapter 12 from 12.3.5 to end
 
 Comments:
+- I liked the cognitive load section and its principles. I think
+  it's important as a teacher to know how we can reduce the 
+  cognitive load for our students in assignments and class.
+- Learning Edge Momentum seems to talk about what Martin was saying
+  last week that we don't have enough sufficient knowledge of 
+  computing in most high schools.
+- the avg ex in p354 could be used to argue start off teaching 
+  programming right by teaching fp.
+- I totally agree with the argument they're having about having 
+  specificly designed languages for teaching programmin in CS1 
+  instead of using commercially popular langs. (p 355)
+- the idea of setting the course at the avg level and have both
+  extension work and targeted support for high-achieving and 
+  struggling students seems to be effective. but the question is
+  how would a teacher know the avg of class beforehand?
