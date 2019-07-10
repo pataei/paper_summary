@@ -1,0 +1,33 @@
+Chapter 13
+
+Comments:
++ enjoyed mentioning open problems and questions at the end of each sec/subsec
+  esp that they argued about different position in a way that by the end of a 
+  sec the read could be thinking of those open questions. my fav: while there 
+  are studies that compare objects-early vs imperative why there are so few
+  studies against fp? would like to discuss this
+- multiple evidence to back up starting off students with FP:
+  * a couple of studied show that student working with non-stateful paradaigms 
+    perform better than others! (p384)
+  * aligning computing with notional machine in other fields such as algebra
+    and transfering their knowledge (p385)
+  * some evidence against OO (p393): complications it introduces into its 
+    notional machine
+  * another study in plan composition p396 where students learn to break down
+    problems and subtask ...
+- totally agree with having sublangs and teaching langs incrementally and 
+  gradually with making the diff in notional machines explicit for students
+  even when sytax and sem doesn't change!
++ paradaigm: stmt about programming lang or style? opinions?
+- never looked at types as a diff lang and the complication of introducing two
+  langs at the same time for statically typed langs! they made quite valid
+  interesting points in that section.
+- very nicely put the diff bw program organization (eg: fp and imperative) 
+  and behavior (eg: reactive)
+- FP paradaigm seems more consistent over the broad range of its languages 
+  compared to imperative and oo! and differences are well-known and explicit
+  in terms of the notional machine.
+- the small scale motivation behind oo langs was rather interseting and how it
+  turned out!
+- navigating the tension between human comprehension and computer interpretation
+  is real!! it really resonated with me this week!
