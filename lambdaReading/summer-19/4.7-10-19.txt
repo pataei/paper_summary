@@ -31,3 +31,8 @@ Comments:
   turned out!
 - navigating the tension between human comprehension and computer interpretation
   is real!! it really resonated with me this week!
+  
+  
+Martin's idea: modular haskell landscape? 
+my follow up on it: could it be done with variational programming??
+use case of variational programming?
