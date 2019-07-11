@@ -36,3 +36,10 @@ Comments:
 Martin's idea: modular haskell landscape? 
 my follow up on it: could it be done with variational programming??
 use case of variational programming?
+
+follow up next time:
+- static types
+- again paradigm
+- very few studies on fp
+- evidences
+- separating software eng and cs
