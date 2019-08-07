@@ -6,8 +6,5 @@ Comments:
 - thoughts on what is the goal of computational thinking?
 - anyone know an ex of a computational thnking lang?
 - is the outline of progression for computational thinking followed 
-  in all US schools? p 521
-
-
-In-meeting comments:
+  in all US schools? p 521 --> it's for England!
 
