@@ -1,0 +1,22 @@
+Summary:
+* I'm not in the mood to write a summary this term!
+
+Comments:
+* no wonder so many misunderstanding happens in natural language.
+* some examples would help understanding different modal logics easier and 
+  maybe more intuitive.
+* the discussion about the geniune difference between ought to ought to 
+  and ought to was interesting.
+* the discussion of possible worlds and that when one says that sth is 
+  necessary it doesn’t mean in all possible worlds rather a class of 
+  possible worlds made some of the previous sections more clear.
+* why would M be incorrect if we read the square as it is ought to be or 
+  it is the case that?
+
+
+In-meeting comments:
+
+Martin:
+* PL uses different logics such as in type systems or operational semantics.
+* This could be used to determine the validity of an expression in a given 
+  time by using temporal logic. 
