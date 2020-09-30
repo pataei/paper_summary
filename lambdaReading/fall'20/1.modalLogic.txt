@@ -16,6 +16,10 @@ Comments:
 
 In-meeting comments:
 
+Eric:
+* The point of having logic is a bit letting go of the intuition and 
+  following the system instead. 
+
 Martin:
 * PL uses different logics such as in type systems or operational semantics.
 * This could be used to determine the validity of an expression in a given 
