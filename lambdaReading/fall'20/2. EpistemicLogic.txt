@@ -1,0 +1,39 @@
+Section 1.2 including Section 1.2.1(Language) from Ditmarsch’s chapter 
+(i.e., pages 1 to 8 inclusive), and Section 1 to 5 inclusive from 
+Holliday’s paper.
+
+
+Summary:
+* episteme: knowledge and information
+* knowledge can be about knowledge and we can even model knowledge about
+  other's knowledge --> VERY COOL
+* Reasoning about knowing what others know (about your knowledge) is also 
+  typical in strategic situations, where one needs to make a decision 
+  based on how others will act (where the others, in turn, are basing 
+  their decision on their reasoning about you). This kind of scenario is 
+  the focus of game theory.
+* epistemic logic reasons about knowledge: K_a
+* doxastic logic reasons about belief: B_a
+* K and B are modal operators
+
+Comments/questions:
+* only spent an hour and didn't finish the entire thing but it was very 
+  fun and half way through I was thinking of its application in politics!
+* knowledge can be about knowledge and we can even model knowledge about
+  other's knowledge --> VERY COOL
+* could we discuss the four formulas in page 2 and 3? also they're plain
+  En explanation of formulas was really helpful
+* the K_a K_b \neg K_a K_b m --> just amazing!
+* also the authors seem to not know about email add ons that let you know
+  if your sent emails have been read or not!
+* i feel like politiciouns should use episteme logic to just lie better or
+  maybe I've been emerging myself way too much in news instead of working!
+* very concise and beautiful modal lang definition
+--------------------------------------------------------------------------
+* she knows whether or not q as k q \vee K \neg q, why not K (q \vee \neg q)?
+* could we discuss how Lewis describes ways the world might be?
+* I feel like i need to read this multiple times to maybe grasp it but man
+  is it fun!
+* also could we discuss the Moore's paradox given on the spy ex?
+
+In-meeting comments:
