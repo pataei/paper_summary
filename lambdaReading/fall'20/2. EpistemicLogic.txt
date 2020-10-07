@@ -31,9 +31,15 @@ Comments/questions:
 * very concise and beautiful modal lang definition
 --------------------------------------------------------------------------
 * she knows whether or not q as k q \vee K \neg q, why not K (q \vee \neg q)?
+  never mind, I got it! 
 * could we discuss how Lewis describes ways the world might be?
 * I feel like i need to read this multiple times to maybe grasp it but man
   is it fun!
 * also could we discuss the Moore's paradox given on the spy ex?
 
 In-meeting comments:
+
+Martin:
+* this is about knowledge and not understanding. you could know sth but
+  don't understand. (isn't that deep!)
+
