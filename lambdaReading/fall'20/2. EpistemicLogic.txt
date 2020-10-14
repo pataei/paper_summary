@@ -4,6 +4,8 @@ Holliday’s paper.
 
 
 Summary:
+* Ditmarsch chapter talks about expressivity and succinctness of 
+  languages. --> a good example on how to compare different languages.
 * episteme: knowledge and information
 * knowledge can be about knowledge and we can even model knowledge about
   other's knowledge --> VERY COOL
