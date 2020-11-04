@@ -1,0 +1,9 @@
+Backtracking, Interleaving, and Terminating Monad Transformers
+up to and including section 5
+
+comments:
+* the fair disjunction idea was really cool
+
+
+In-meeting comments:
+- it's adding functionality in a systematic way to logic prog
